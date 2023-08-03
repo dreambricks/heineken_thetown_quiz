@@ -9,33 +9,31 @@ public class QuestionPanel : MonoBehaviour
     public Question question;
     public Button[] buttons;
     public Text textUI;
-    private List<string> alternativeList = new List<string>();
     public List<Question> questions= new List<Question>();
+    public List<Question> questionPool = new List<Question>();
+    public AudioSource audio;
+    public AudioClip correct;
+    public AudioClip incorrect;
 
-    void Start()
+    void OnEnable()
     {
-        
+        //AddRandomItems(5);
         question = ChooseRandomItem(questions);
-        ShuffleAndCopy(question);
+        BuildQuestion(question);
 
-
-        if (buttons.Length != alternativeList.Count)
-        {
-            Debug.LogError("O número de botões não corresponde ao número de strings na lista.");
-            return;
-        }
-
-        textUI.text = question.cantorMusica;
-
-        // Atribui cada string da lista ao texto dos botões correspondentes
+        // Adicione um ouvinte de clique para cada botão
         for (int i = 0; i < buttons.Length; i++)
         {
-            buttons[i].GetComponentInChildren<Text>().text = alternativeList[i];
+            int buttonIndex = i;  // Variável para capturar o valor de i para uso no listener
+            buttons[i].onClick.AddListener(() => CheckAnswer(buttonIndex));
         }
+       
     }
 
-    private void ShuffleAndCopy(Question question)
+
+    private void BuildQuestion(Question question)
     {
+        List<string> alternativeList = new List<string>();
         // Cria uma lista temporária para embaralhar os itens
         List<string> tempList = new List<string>(question.alternatives);
 
@@ -52,6 +50,20 @@ public class QuestionPanel : MonoBehaviour
 
         // Copia os itens embaralhados para a lista aleatória
         alternativeList.AddRange(tempList);
+
+        if (buttons.Length != alternativeList.Count)
+        {
+            Debug.LogError("O número de botões não corresponde ao número de strings na lista.");
+            return;
+        }
+
+        textUI.text = question.cantorMusica;
+
+        // Atribui cada string da lista ao texto dos botões correspondentes
+        for (int i = 0; i < buttons.Length; i++)
+        {
+            buttons[i].GetComponentInChildren<Text>().text = alternativeList[i];
+        }
     }
 
     private Question ChooseRandomItem(List<Question> lista)
@@ -68,5 +80,76 @@ public class QuestionPanel : MonoBehaviour
 
         // Retorna o item aleatório
         return lista[indiceAleatorio];
+    }
+
+    private void AddRandomItems(int itemCount)
+    {
+        if (questions.Count == 0)
+        {
+            Debug.LogWarning("A lista de origem está vazia.");
+            return;
+        }
+
+        if (itemCount > questions.Count)
+        {
+            Debug.LogWarning("Não há itens suficientes na lista de origem.");
+            itemCount = questions.Count;
+        }
+
+        for (int i = 0; i < itemCount; i++)
+        {
+            int randomIndex = Random.Range(0, questions.Count); // Escolhe um índice aleatório
+            Question randomItem = questions[randomIndex]; // Pega o item aleatório
+
+            questionPool.Add(randomItem); // Adiciona o item à lista de destino
+            questions.RemoveAt(randomIndex); // Remove o item da lista de origem
+        }
+    }
+
+    void CheckAnswer(int buttonIndex)
+    {
+        string buttonText = buttons[buttonIndex].GetComponentInChildren<Text>().text;
+
+        if (buttonText == question.answer)
+        {
+            // Resposta correta
+            buttons[buttonIndex].GetComponent<Image>().color = Color.green;
+
+            audio.PlayOneShot(correct);
+        }
+        else
+        {
+            // Resposta incorreta
+            buttons[buttonIndex].GetComponent<Image>().color = Color.red;
+            // Encontrar o índice do botão com a resposta correta
+            int correctButtonIndex = GetCorrectButtonIndex();
+            buttons[correctButtonIndex].GetComponent<Image>().color = Color.green;
+
+            audio.PlayOneShot(incorrect);
+        }
+
+        // Desabilitar os botões após a resposta
+        DisableButtons();
+    }
+
+    int GetCorrectButtonIndex()
+    {
+        for (int i = 0; i < buttons.Length; i++)
+        {
+            if (buttons[i].GetComponentInChildren<Text>().text == question.answer)
+            {
+                return i;
+            }
+        }
+        return -1;  // Retorna -1 se não encontrar a resposta correta (tratar isso conforme sua necessidade)
+    }
+
+    void DisableButtons()
+    {
+        // Desabilitar todos os botões após uma resposta
+        for (int i = 0; i < buttons.Length; i++)
+        {
+            buttons[i].interactable = false;
+        }
     }
 }
