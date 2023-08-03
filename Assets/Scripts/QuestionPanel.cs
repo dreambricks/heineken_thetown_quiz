@@ -7,32 +7,39 @@ public class QuestionPanel : MonoBehaviour
 {
 
     public Question question;
+
     public Button[] buttons;
     public Text textUI;
+
     public List<Question> questions= new List<Question>();
     public List<Question> questionPool = new List<Question>();
-    public AudioSource audio;
+    private int currentQuestionIndex = 0;
+
+    public AudioSource audioSource;
     public AudioClip correct;
     public AudioClip incorrect;
 
     void OnEnable()
     {
-        //AddRandomItems(5);
-        question = ChooseRandomItem(questions);
-        BuildQuestion(question);
+        AddRandomItems(5);
+        //question = ChooseRandomItem(questions);
 
-        // Adicione um ouvinte de clique para cada botão
-        for (int i = 0; i < buttons.Length; i++)
+        for (int j = 0; j < buttons.Length; j++)
         {
-            int buttonIndex = i;  // Variável para capturar o valor de i para uso no listener
-            buttons[i].onClick.AddListener(() => CheckAnswer(buttonIndex));
+            int buttonIndex = j;  // Variável para capturar o valor de i para uso no listener
+            buttons[j].onClick.AddListener(() => StartCoroutine(CheckAnswer(buttonIndex)));
         }
-       
+
+        BuildQuestion(currentQuestionIndex);
+
     }
 
 
-    private void BuildQuestion(Question question)
+    private void BuildQuestion(int questionIndex)
     {
+        Debug.Log(questionIndex);
+        question = questionPool[questionIndex];
+
         List<string> alternativeList = new List<string>();
         // Cria uma lista temporária para embaralhar os itens
         List<string> tempList = new List<string>(question.alternatives);
@@ -102,11 +109,11 @@ public class QuestionPanel : MonoBehaviour
             Question randomItem = questions[randomIndex]; // Pega o item aleatório
 
             questionPool.Add(randomItem); // Adiciona o item à lista de destino
-            questions.RemoveAt(randomIndex); // Remove o item da lista de origem
+            
         }
     }
 
-    void CheckAnswer(int buttonIndex)
+    IEnumerator CheckAnswer(int buttonIndex)
     {
         string buttonText = buttons[buttonIndex].GetComponentInChildren<Text>().text;
 
@@ -115,7 +122,7 @@ public class QuestionPanel : MonoBehaviour
             // Resposta correta
             buttons[buttonIndex].GetComponent<Image>().color = Color.green;
 
-            audio.PlayOneShot(correct);
+            audioSource.PlayOneShot(correct);
         }
         else
         {
@@ -125,11 +132,24 @@ public class QuestionPanel : MonoBehaviour
             int correctButtonIndex = GetCorrectButtonIndex();
             buttons[correctButtonIndex].GetComponent<Image>().color = Color.green;
 
-            audio.PlayOneShot(incorrect);
+            audioSource.PlayOneShot(incorrect);
         }
 
         // Desabilitar os botões após a resposta
         DisableButtons();
+        yield return new WaitForSeconds(3);
+
+
+        currentQuestionIndex++;
+        if (currentQuestionIndex < questionPool.Count)
+        {
+            EnableButtons();
+            BuildQuestion(currentQuestionIndex);
+        }
+        else
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     int GetCorrectButtonIndex()
@@ -143,7 +163,7 @@ public class QuestionPanel : MonoBehaviour
         }
         return -1;  // Retorna -1 se não encontrar a resposta correta (tratar isso conforme sua necessidade)
     }
-
+    
     void DisableButtons()
     {
         // Desabilitar todos os botões após uma resposta
@@ -152,4 +172,17 @@ public class QuestionPanel : MonoBehaviour
             buttons[i].interactable = false;
         }
     }
+
+    void EnableButtons()
+    {
+        // Desabilitar todos os botões após uma resposta
+        for (int i = 0; i < buttons.Length; i++)
+        {
+            buttons[i].interactable = true;
+            Color buttonColor = buttons[i].GetComponent<Image>().color;
+            buttonColor.a = 0f;
+            buttons[i].GetComponent<Image>().color = buttonColor;
+        }
+    }
+
 }
