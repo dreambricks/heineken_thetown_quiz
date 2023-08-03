@@ -8,12 +8,13 @@ public class QuestionPanel : MonoBehaviour
 
     public Question question;
     public Button[] buttons;
+    public Text textUI;
     private List<string> alternativeList = new List<string>();
     public List<Question> questions= new List<Question>();
 
     void Start()
     {
-
+        
         question = ChooseRandomItem(questions);
         ShuffleAndCopy(question);
 
@@ -23,6 +24,8 @@ public class QuestionPanel : MonoBehaviour
             Debug.LogError("O número de botões não corresponde ao número de strings na lista.");
             return;
         }
+
+        textUI.text = question.cantorMusica;
 
         // Atribui cada string da lista ao texto dos botões correspondentes
         for (int i = 0; i < buttons.Length; i++)
