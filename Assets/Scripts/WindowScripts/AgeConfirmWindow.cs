@@ -7,7 +7,7 @@ using CodeMonkey.Utils;
 
 public class AgeConfirmWindow : MonoBehaviour
 {
-    public event EventHandler OnClicked;
+    
 
 
     public void Show()
