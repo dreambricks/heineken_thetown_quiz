@@ -12,7 +12,7 @@ public class YouWinWindow : MonoBehaviour
     public event EventHandler OnClicked;
 
     public AudioSource audioSource;
-    public AudioClip clip;
+    public AudioClip soundWin;
 
     public TextMeshProUGUI hitsText;
     public TextMeshProUGUI missText;
@@ -32,15 +32,25 @@ public class YouWinWindow : MonoBehaviour
 
     private void OnEnable()
     {
-        audioSource.Stop();
+        if (audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
+
         StartCoroutine(PlaySound());
         hitsText.text = points.hits + " acertos";
         missText.text = points.miss + " erros";
     }
 
+    private void OnDisable()
+    {
+        points.Hide();
+    }
+
+
     IEnumerator PlaySound()
     {
-        audioSource.PlayOneShot(clip);
+        audioSource.PlayOneShot(soundWin);
         yield return new WaitForSeconds(15);
         audioSource.Stop();
     }

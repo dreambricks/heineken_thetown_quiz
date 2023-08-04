@@ -14,9 +14,12 @@ public class Points : MonoBehaviour
         miss = 0;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Show()
     {
-        
+        gameObject.SetActive(true);
+    }
+    public void Hide()
+    {
+        gameObject.SetActive(false);
     }
 }

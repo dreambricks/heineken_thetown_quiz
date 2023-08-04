@@ -200,7 +200,7 @@ public class QuestionPanel : MonoBehaviour
             {
                 youLoseWindow.Show();
             }
-            audioSource.Stop();
+            
             playGame.Hide();
         }
     }
