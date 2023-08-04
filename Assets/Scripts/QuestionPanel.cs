@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,34 +11,47 @@ public class QuestionPanel : MonoBehaviour
 
     public Button[] buttons;
     public Text textUI;
+    public Text acertouErrou;
 
-    public List<Question> questions= new List<Question>();
-    public List<Question> questionPool = new List<Question>();
+    public List<Question> questions = new List<Question>();
+    public List<Question> questionPool;
     private int currentQuestionIndex = 0;
 
     public AudioSource audioSource;
     public AudioClip correct;
     public AudioClip incorrect;
+    public AudioClip music;
 
-    void OnEnable()
+    private void Start()
     {
-        AddRandomItems(5);
-        //question = ChooseRandomItem(questions);
-
         for (int j = 0; j < buttons.Length; j++)
         {
             int buttonIndex = j;  // Variável para capturar o valor de i para uso no listener
             buttons[j].onClick.AddListener(() => StartCoroutine(CheckAnswer(buttonIndex)));
         }
 
+    }
+
+    void OnEnable()
+    {
+        audioSource.Stop();
+        questionPool = new List<Question>();
+
+        AddRandomItems(5);
+        
+    
+        acertouErrou.gameObject.SetActive(false);
+
         BuildQuestion(currentQuestionIndex);
+        audioSource.PlayOneShot(music);
+        Debug.Log(music.name);
 
     }
 
 
     private void BuildQuestion(int questionIndex)
     {
-        Debug.Log(questionIndex);
+        
         question = questionPool[questionIndex];
 
         List<string> alternativeList = new List<string>();
@@ -64,6 +78,8 @@ public class QuestionPanel : MonoBehaviour
             return;
         }
 
+        music = ChooseRandomItem(question.audios);
+
         textUI.text = question.cantorMusica;
 
         // Atribui cada string da lista ao texto dos botões correspondentes
@@ -73,7 +89,7 @@ public class QuestionPanel : MonoBehaviour
         }
     }
 
-    private Question ChooseRandomItem(List<Question> lista)
+    private AudioClip ChooseRandomItem(List<AudioClip> lista)
     {
         // Verifica se a lista está vazia
         if (lista.Count == 0)
@@ -91,6 +107,8 @@ public class QuestionPanel : MonoBehaviour
 
     private void AddRandomItems(int itemCount)
     {
+        HashSet<Question> temp = new HashSet<Question>();
+
         if (questions.Count == 0)
         {
             Debug.LogWarning("A lista de origem está vazia.");
@@ -103,14 +121,17 @@ public class QuestionPanel : MonoBehaviour
             itemCount = questions.Count;
         }
 
-        for (int i = 0; i < itemCount; i++)
+        while (temp.Count != itemCount)
         {
+
             int randomIndex = Random.Range(0, questions.Count); // Escolhe um índice aleatório
             Question randomItem = questions[randomIndex]; // Pega o item aleatório
 
-            questionPool.Add(randomItem); // Adiciona o item à lista de destino
-            
+            temp.Add(randomItem); // Adiciona o item à lista de destino
+
         }
+
+        questionPool.AddRange(temp);
     }
 
     IEnumerator CheckAnswer(int buttonIndex)
@@ -123,6 +144,10 @@ public class QuestionPanel : MonoBehaviour
             buttons[buttonIndex].GetComponent<Image>().color = Color.green;
 
             audioSource.PlayOneShot(correct);
+
+            acertouErrou.gameObject.SetActive(true);
+            acertouErrou.text = "Acertou!";
+            acertouErrou.color = Color.green;
         }
         else
         {
@@ -133,11 +158,17 @@ public class QuestionPanel : MonoBehaviour
             buttons[correctButtonIndex].GetComponent<Image>().color = Color.green;
 
             audioSource.PlayOneShot(incorrect);
+
+            acertouErrou.gameObject.SetActive(true);
+            acertouErrou.text = "Errou!";
+            acertouErrou.color = Color.red;
+
         }
 
         // Desabilitar os botões após a resposta
         DisableButtons();
         yield return new WaitForSeconds(3);
+        acertouErrou.gameObject.SetActive(false);
 
 
         currentQuestionIndex++;
@@ -145,6 +176,9 @@ public class QuestionPanel : MonoBehaviour
         {
             EnableButtons();
             BuildQuestion(currentQuestionIndex);
+            audioSource.Stop();
+            audioSource.PlayOneShot(music);
+            Debug.Log(music.name);
         }
         else
         {

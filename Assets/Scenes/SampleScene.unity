@@ -168,9 +168,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audios:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 4e09a6dad525ede488656b4f3e7e58b6, type: 3}
+  - {fileID: 8300000, guid: 23eadc665fbabdf4eab7c5b06f9edeba, type: 3}
+  - {fileID: 8300000, guid: a0152e4746ae252448fe342cdf08d2ec, type: 3}
   alternatives:
   - MC Ryan SP
   - MC Cabelinho
@@ -211,7 +211,7 @@ RectTransform:
   m_Children:
   - {fileID: 1687381964}
   m_Father: {fileID: 349912025}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -345,9 +345,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audios:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: ff84fa8be6da18749b05ac6d9c8f7add, type: 3}
+  - {fileID: 8300000, guid: aaae56484760d2947bab18ac864b438c, type: 3}
+  - {fileID: 8300000, guid: b4a7c46cc290959448a89cf308ff97dd, type: 3}
   alternatives:
   - Fernanda Takai
   - Pitty
@@ -511,7 +511,7 @@ RectTransform:
   m_Children:
   - {fileID: 1171321857}
   m_Father: {fileID: 349912025}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -650,6 +650,86 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaa2cf6811f10664dac7d6bf365cb3bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &167463864
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 167463865}
+  - component: {fileID: 167463867}
+  - component: {fileID: 167463866}
+  m_Layer: 5
+  m_Name: AcertouErrou(text)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &167463865
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167463864}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 349912025}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.7344074}
+  m_AnchorMax: {x: 1, y: 0.83322227}
+  m_AnchoredPosition: {x: 0, y: -510}
+  m_SizeDelta: {x: 0, y: 133.45428}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &167463866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167463864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: fe1a1c9cabaef9742bda118a4ed5e0c5, type: 3}
+    m_FontSize: 80
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 104
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: Acertou!
+--- !u!222 &167463867
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167463864}
+  m_CullTransparentMesh: 1
 --- !u!1 &196445141
 GameObject:
   m_ObjectHideFlags: 0
@@ -695,9 +775,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audios:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 2bca51361dc876b47bdcde33ff06422b, type: 3}
+  - {fileID: 8300000, guid: bd36e806d03944f41a7599df43416662, type: 3}
+  - {fileID: 8300000, guid: 6704c6603af50b74f95197b090d0cf98, type: 3}
   alternatives:
   - Treasure
   - 24k Magic
@@ -765,11 +845,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: fe1a1c9cabaef9742bda118a4ed5e0c5, type: 3}
-    m_FontSize: 33
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 40
+    m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -925,11 +1005,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: fe1a1c9cabaef9742bda118a4ed5e0c5, type: 3}
-    m_FontSize: 33
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 40
+    m_MaxSize: 300
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -990,9 +1070,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audios:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: a58bf31f1bde37d42b2cc807baae20bf, type: 3}
+  - {fileID: 8300000, guid: 9d4ecf7c1c9447947a270d4ba6171eb8, type: 3}
+  - {fileID: 8300000, guid: 1c0e785b9c77c0c44945815a347521cb, type: 3}
   alternatives:
   - Marron 5
   - Ne-yo
@@ -1108,6 +1188,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 236989561}
+  - {fileID: 167463865}
   - {fileID: 54488116}
   - {fileID: 1925472896}
   - {fileID: 162305416}
@@ -1177,6 +1258,7 @@ MonoBehaviour:
   - {fileID: 162305417}
   - {fileID: 1388693517}
   textUI: {fileID: 236989562}
+  acertouErrou: {fileID: 167463866}
   questions:
   - {fileID: 906368298}
   - {fileID: 303548711}
@@ -1197,6 +1279,7 @@ MonoBehaviour:
   audioSource: {fileID: 1903050560}
   correct: {fileID: 8300000, guid: 6e864852548b19243a7725418c9f6a61, type: 3}
   incorrect: {fileID: 8300000, guid: 2cb2a338de0b2694e8a9c0f8b6960043, type: 3}
+  music: {fileID: 0}
 --- !u!1 &489721773
 GameObject:
   m_ObjectHideFlags: 0
@@ -1242,9 +1325,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audios:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: ae7d16fbeadae284e934a6977e3adc9c, type: 3}
+  - {fileID: 8300000, guid: 65dbd2deaf8967f44b89ab3bfe9a9936, type: 3}
+  - {fileID: 8300000, guid: 4743addea1dfb224592d86f9cc9d9a1e, type: 3}
   alternatives:
   - Bebe Rexha
   - Iggy Azalea
@@ -1456,9 +1539,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audios:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: b56fbb7afe3f3314bab0445bd71eb812, type: 3}
+  - {fileID: 8300000, guid: 892101edea41540478969a99070c0fbe, type: 3}
+  - {fileID: 8300000, guid: b61b9848284fb7e46980351878978398, type: 3}
   alternatives:
   - Every Kind of Way
   - Focus
@@ -1692,9 +1775,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audios:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 8ff15ce35d678cf4d8bd2ceb56b286f5, type: 3}
+  - {fileID: 8300000, guid: a139362e9d7b0554c9d6c543d269e584, type: 3}
+  - {fileID: 8300000, guid: 8239d6e200b0d054c9816f16d7f2102a, type: 3}
   alternatives:
   - "Lu\xEDsa Sonza"
   - Pitty
@@ -1823,9 +1906,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audios:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 528c451bcb6487d458322d9bf9d2797e, type: 3}
+  - {fileID: 8300000, guid: 54b37d7855b096145b83892a2f77664f, type: 3}
+  - {fileID: 8300000, guid: 9ad0fad913c091942a87514bce9bb07f, type: 3}
   alternatives:
   - Post Malone
   - Marron 5
@@ -2460,11 +2543,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: fe1a1c9cabaef9742bda118a4ed5e0c5, type: 3}
-    m_FontSize: 33
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 40
+    m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -2816,7 +2899,7 @@ RectTransform:
   m_Children:
   - {fileID: 233917670}
   m_Father: {fileID: 349912025}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -2950,9 +3033,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audios:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: cb7978de154ff274c87872fa413b6267, type: 3}
+  - {fileID: 8300000, guid: e61a86f9d53bc9e4896947d414bab6d1, type: 3}
+  - {fileID: 8300000, guid: 426a0332409848443bd974d1ef4fcb3f, type: 3}
   alternatives:
   - Radar
   - Cadeado
@@ -3271,11 +3354,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: fe1a1c9cabaef9742bda118a4ed5e0c5, type: 3}
-    m_FontSize: 33
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 40
+    m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -3369,9 +3452,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audios:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: b804722ab1be0c94b83a6c409ed64efc, type: 3}
+  - {fileID: 8300000, guid: 8e2f4436e3b6e6849a07aa6048defe36, type: 3}
+  - {fileID: 8300000, guid: 47d8c1cf98fe6e34cb5df05e2b5919a6, type: 3}
   alternatives:
   - "Karol Conk\xE1"
   - MC Dricka
@@ -3424,9 +3507,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audios:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: d42053a1e31853a428723bfe39ef1ec9, type: 3}
+  - {fileID: 8300000, guid: 26e04dfb1b4002447ab00213e2d418af, type: 3}
+  - {fileID: 8300000, guid: 3fbcf301cd00bfa4895c4ab01e52fc9c, type: 3}
   alternatives:
   - No One Knows
   - Best Of You
@@ -3522,10 +3605,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f5945efb2b85ceb4d894ecb3e3457c32, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -3655,7 +3738,7 @@ RectTransform:
   m_Children:
   - {fileID: 247293492}
   m_Father: {fileID: 349912025}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -3835,9 +3918,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audios:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: abbaa4b8ce85a54419fe2891d9e3324b, type: 3}
+  - {fileID: 8300000, guid: 29266f8d51c326e47879be7d75a2eae5, type: 3}
+  - {fileID: 8300000, guid: 9cac7c099e563e543b6f770b9871ea41, type: 3}
   alternatives:
   - Learn To Fly
   - Best Of You
@@ -3966,9 +4049,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audios:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: c868a4ef931a5aa4c9290acb29d9b124, type: 3}
+  - {fileID: 8300000, guid: 0413883f17ba91b44be0f20612d7ddb0, type: 3}
+  - {fileID: 8300000, guid: fc993b7b561af0849b8c3a7f2670a3e3, type: 3}
   alternatives:
   - Idiota
   - Outro lugar
@@ -4097,9 +4180,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audios:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 4ff3083fe7c471a4ea84ea760b1bd1f0, type: 3}
+  - {fileID: 8300000, guid: 5d4e0e71668edc645b7bef2342774940, type: 3}
+  - {fileID: 8300000, guid: ddf52ed56a235544a92bf36b086c6006, type: 3}
   alternatives:
   - Radar
   - Cadeado
