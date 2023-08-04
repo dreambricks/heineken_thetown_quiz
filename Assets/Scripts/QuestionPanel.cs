@@ -9,6 +9,12 @@ public class QuestionPanel : MonoBehaviour
 
     public Question question;
 
+    [SerializeField] private PlayGame playGame;
+    [SerializeField] private YouWinWindow youWinWindow;
+    [SerializeField] private YouLoseWindow youLoseWindow;
+
+    [SerializeField] private Points points;
+
     public Button[] buttons;
     public Text textUI;
     public Text acertouErrou;
@@ -148,6 +154,8 @@ public class QuestionPanel : MonoBehaviour
             acertouErrou.gameObject.SetActive(true);
             acertouErrou.text = "Acertou!";
             acertouErrou.color = Color.green;
+
+            points.hits++;
         }
         else
         {
@@ -162,6 +170,8 @@ public class QuestionPanel : MonoBehaviour
             acertouErrou.gameObject.SetActive(true);
             acertouErrou.text = "Errou!";
             acertouErrou.color = Color.red;
+
+            points.miss++;
 
         }
 
@@ -182,7 +192,16 @@ public class QuestionPanel : MonoBehaviour
         }
         else
         {
-            gameObject.SetActive(false);
+            if (points.hits >= 3)
+            {
+                youWinWindow.Show();
+            }
+            else
+            {
+                youLoseWindow.Show();
+            }
+            audioSource.Stop();
+            playGame.Hide();
         }
     }
 

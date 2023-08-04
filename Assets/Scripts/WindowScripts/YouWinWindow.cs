@@ -2,11 +2,22 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 using CodeMonkey.Utils;
+
 
 public class YouWinWindow : MonoBehaviour
 {
     public event EventHandler OnClicked;
+
+    public AudioSource audioSource;
+    public AudioClip clip;
+
+    public TextMeshProUGUI hitsText;
+    public TextMeshProUGUI missText;
+
+    [SerializeField] private Points points;
 
     private void Awake()
     {
@@ -19,6 +30,22 @@ public class YouWinWindow : MonoBehaviour
 
     }
 
+    private void OnEnable()
+    {
+        audioSource.Stop();
+        StartCoroutine(PlaySound());
+        hitsText.text = points.hits + " acertos";
+        missText.text = points.miss + " erros";
+    }
+
+    IEnumerator PlaySound()
+    {
+        audioSource.PlayOneShot(clip);
+        yield return new WaitForSeconds(15);
+        audioSource.Stop();
+    }
+
+
     public void Show()
     {
         gameObject.SetActive(true);
@@ -27,4 +54,6 @@ public class YouWinWindow : MonoBehaviour
     {
         gameObject.SetActive(false);
     }
+
+
 }
