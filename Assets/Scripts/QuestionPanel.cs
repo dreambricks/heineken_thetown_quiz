@@ -52,6 +52,10 @@ public class QuestionPanel : MonoBehaviour
         audioSource.PlayOneShot(music);
         Debug.Log(music.name);
 
+        points.Show();
+        points.hits= 0;
+        points.miss= 0;
+
     }
 
 
@@ -200,7 +204,8 @@ public class QuestionPanel : MonoBehaviour
             {
                 youLoseWindow.Show();
             }
-            
+            EnableButtons();
+            currentQuestionIndex = 0;
             playGame.Hide();
         }
     }

@@ -4,15 +4,33 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    [SerializeField] private MainWindow mainWindow;
+    [SerializeField] private AgeConfirmWindow ageConfirmWindow;
+    [SerializeField] private MinorAgeWindow minorAgeWindow;
+    [SerializeField] private RegisterWindow registerWindow;
+    [SerializeField] private TermsWindow termsWindow;
+    [SerializeField] private PrivacyPolicyWindow privacyPolicyWindow;
+    [SerializeField] private GuessWhoWindow guessWhoWindow;
+    [SerializeField] private RegressiveCountWindow regressiveCountWindow;
+    [SerializeField] private PlayGame playGame;
+    [SerializeField] private Points points; 
+    [SerializeField] private YouWinWindow youWinWindow;
+    [SerializeField] private YouLoseWindow youLoseWindow;
+
+    private void Start()
     {
-        
+        mainWindow.Hide();
+        ageConfirmWindow.Hide();
+        minorAgeWindow.Hide();
+        registerWindow.Hide();
+        termsWindow.Hide();
+        privacyPolicyWindow.Hide();
+        guessWhoWindow.Hide();
+        regressiveCountWindow.Hide();
+        playGame.Hide();
+        points.Hide();
+        youWinWindow.Hide();
+        youLoseWindow.Hide();   
     }
 }
