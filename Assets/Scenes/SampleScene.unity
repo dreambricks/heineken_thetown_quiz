@@ -1527,6 +1527,7 @@ GameObject:
   - component: {fileID: 282014167}
   - component: {fileID: 282014166}
   - component: {fileID: 282014165}
+  - component: {fileID: 282014168}
   m_Layer: 5
   m_Name: "DataDeAnivers\xE1rio(InputField)"
   m_TagString: Untagged
@@ -1599,13 +1600,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 282014166}
   m_TextComponent: {fileID: 1079582973}
   m_Placeholder: {fileID: 741457792}
-  m_ContentType: 2
+  m_ContentType: 0
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 4
+  m_KeyboardType: 0
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 1
+  m_CharacterValidation: 0
   m_CharacterLimit: 0
   m_OnSubmit:
     m_PersistentCalls:
@@ -1662,6 +1663,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 282014163}
   m_CullTransparentMesh: 1
+--- !u!114 &282014168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282014163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6b78c8e6659a4d43b7072859837092a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputField: {fileID: 282014165}
 --- !u!1 &303548709
 GameObject:
   m_ObjectHideFlags: 0
@@ -2517,11 +2531,11 @@ MonoBehaviour:
     the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..",
     comes from a line in section 1.10.32.
 
-    
 
-    The standard chunk of Lorem
-    Ipsum used since the 1500s is reproduced below for those interested. Sections
-    1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced
+
+    The standard chunk of Lorem Ipsum
+    used since the 1500s is reproduced below for those interested. Sections 1.10.32
+    and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced
     in their exact original form, accompanied by English versions from the 1914 translation
     by H. Rackham.'
 --- !u!222 &583199936
@@ -5044,7 +5058,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1090452381
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5464,7 +5478,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1238949509
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7136,6 +7150,7 @@ GameObject:
   - component: {fileID: 1582002872}
   - component: {fileID: 1582002871}
   - component: {fileID: 1582002870}
+  - component: {fileID: 1582002873}
   m_Layer: 5
   m_Name: CPF(InputField)
   m_TagString: Untagged
@@ -7208,14 +7223,14 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1582002871}
   m_TextComponent: {fileID: 1847652738}
   m_Placeholder: {fileID: 1733963797}
-  m_ContentType: 2
+  m_ContentType: 9
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 4
+  m_KeyboardType: 2
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 1
-  m_CharacterLimit: 0
+  m_CharacterValidation: 0
+  m_CharacterLimit: 14
   m_OnSubmit:
     m_PersistentCalls:
       m_Calls: []
@@ -7271,6 +7286,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1582002868}
   m_CullTransparentMesh: 1
+--- !u!114 &1582002873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582002868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 982c9c1a204899149a478a1bedf3507d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputField: {fileID: 1582002870}
 --- !u!1 &1639684365
 GameObject:
   m_ObjectHideFlags: 0
@@ -7282,6 +7310,7 @@ GameObject:
   - component: {fileID: 1639684366}
   - component: {fileID: 1639684368}
   - component: {fileID: 1639684367}
+  - component: {fileID: 1639684369}
   m_Layer: 5
   m_Name: RegressiveCountPanel
   m_TagString: Untagged
@@ -7348,6 +7377,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1639684365}
   m_CullTransparentMesh: 1
+--- !u!114 &1639684369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639684365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2d9ea1a3747f7541960c3d875bdb9ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalTime: 4
+  countdownText: {fileID: 240995083}
+  playGame: {fileID: 1726761067}
+  regressiveCountWindow: {fileID: 1090452382}
 --- !u!1 &1673475929
 GameObject:
   m_ObjectHideFlags: 0
@@ -7766,11 +7811,11 @@ MonoBehaviour:
     the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..",
     comes from a line in section 1.10.32.
 
-    
 
-    The standard chunk of Lorem
-    Ipsum used since the 1500s is reproduced below for those interested. Sections
-    1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced
+
+    The standard chunk of Lorem Ipsum
+    used since the 1500s is reproduced below for those interested. Sections 1.10.32
+    and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced
     in their exact original form, accompanied by English versions from the 1914 translation
     by H. Rackham.'
 --- !u!222 &1733302943
