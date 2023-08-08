@@ -18,7 +18,7 @@ public class YouWinWindow : MonoBehaviour
     public TextMeshProUGUI missText;
 
     [SerializeField] private Points points;
-    [SerializeField] private PlayGame playGame;
+    [SerializeField] private MainWindow mainWindow;
 
     private void Awake()
     {
@@ -41,13 +41,14 @@ public class YouWinWindow : MonoBehaviour
         StartCoroutine(PlaySound());
         hitsText.text = points.hits + " acertos";
         missText.text = points.miss + " erros";
-        StartCoroutine(PlayLoop());
+        StartCoroutine(GoMainWindow());
     }
 
     private void OnDisable()
     {
         points.Hide();
     }
+
 
 
     IEnumerator PlaySound()
@@ -57,11 +58,11 @@ public class YouWinWindow : MonoBehaviour
         audioSource.Stop();
     }
 
-    IEnumerator PlayLoop()
+    IEnumerator GoMainWindow()
     {  
         yield return new WaitForSeconds(20);
 
-        playGame.Show();
+        mainWindow.Show();
         Hide();
     }
 

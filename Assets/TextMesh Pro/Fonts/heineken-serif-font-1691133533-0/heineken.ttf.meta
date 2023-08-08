@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fe1a1c9cabaef9742bda118a4ed5e0c5
+guid: 3e8f6bf1aac854c44b6362f31fec67b3
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -10,7 +10,8 @@ TrueTypeFontImporter:
   includeFontData: 1
   fontNames:
   - Heineken
-  fallbackFontReferences: []
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 8c6834828e9d636499dd388288f52d9b, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1

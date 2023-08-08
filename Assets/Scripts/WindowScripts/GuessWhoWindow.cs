@@ -1,19 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GuessWhoWindow : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    public Button startBtn;
+
+    [SerializeField] private RegressiveCountWindow regressiveCountWindow;
+
+
     void Start()
     {
-        
+        startBtn.onClick.AddListener(() => GoRegressiveCountWindow());
     }
 
-    // Update is called once per frame
-    void Update()
+    private void GoRegressiveCountWindow()
     {
-        
+        regressiveCountWindow.Show();
+        Hide();
     }
 
     public void Show()

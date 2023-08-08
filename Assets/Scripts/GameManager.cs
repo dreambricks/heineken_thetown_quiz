@@ -14,13 +14,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GuessWhoWindow guessWhoWindow;
     [SerializeField] private RegressiveCountWindow regressiveCountWindow;
     [SerializeField] private PlayGame playGame;
-    [SerializeField] private Points points; 
+    [SerializeField] private Points points;
     [SerializeField] private YouWinWindow youWinWindow;
     [SerializeField] private YouLoseWindow youLoseWindow;
 
     private void Start()
     {
-        mainWindow.Hide();
+        mainWindow.Show();
         ageConfirmWindow.Hide();
         minorAgeWindow.Hide();
         registerWindow.Hide();
@@ -31,6 +31,22 @@ public class GameManager : MonoBehaviour
         playGame.Hide();
         points.Hide();
         youWinWindow.Hide();
-        youLoseWindow.Hide();   
+        youLoseWindow.Hide();
+
+        mainWindow.OnClicked += MainWindow_OnClicked;
+        minorAgeWindow.OnClicked += MinorAgeWindow_OnClicked;
+    }
+
+    private void MainWindow_OnClicked(object sender, System.EventArgs e)
+    {
+
+        mainWindow.Hide();
+        ageConfirmWindow.Show();
+    }
+
+    private void MinorAgeWindow_OnClicked(object sender, System.EventArgs e)
+    {
+        ageConfirmWindow.Show();
+        minorAgeWindow.Hide();
     }
 }

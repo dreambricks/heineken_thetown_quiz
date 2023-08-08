@@ -1,20 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TermsWindow : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    [SerializeField] private RegisterWindow registerWindow;
+
+    public Button closeBtn;
+
     void Start()
     {
-        
+        closeBtn.onClick.AddListener(() => GoRegister());
     }
 
-    // Update is called once per frame
-    void Update()
+    private void GoRegister()
     {
-        
+        registerWindow.Show();
+        Hide();
     }
+
 
     public void Show()
     {
