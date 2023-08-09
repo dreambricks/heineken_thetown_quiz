@@ -31,6 +31,15 @@ public class RegisterWindow : MonoBehaviour
         advanceBtn.onClick.AddListener(() => GoGuessWhoWindow());
     }
 
+    private void OnEnable()
+    {
+        nome.text = "";
+        sobrenome.text = "";
+        cpf.text = "";
+        email.text = "";
+        dataAniversario.text = "";
+    }
+
     private void GoTerms()
     {
         termsWindow.Show();
@@ -57,7 +66,6 @@ public class RegisterWindow : MonoBehaviour
         }
        
     }
-
 
 
     public void Show()

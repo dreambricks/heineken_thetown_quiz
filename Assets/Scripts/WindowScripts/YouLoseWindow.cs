@@ -1,47 +1,38 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using CodeMonkey.Utils;
+using UnityEngine.UI;
 using TMPro;
 
 public class YouLoseWindow : MonoBehaviour
 {
-    public event EventHandler OnClicked;
-
     public AudioSource audioSource;
-    public AudioClip clip;
+    public AudioClip soundLose;
 
     public TextMeshProUGUI hitsText;
     public TextMeshProUGUI missText;
+    public Button homeBtn;
 
     [SerializeField] private Points points;
-    [SerializeField] private PlayGame playGame;
+    [SerializeField] private MainWindow mainWindow;
 
-    private void Awake()
+
+    private void Start()
     {
-
-        transform.Find("YouLoseBtn").GetComponent<Button_UI>().ClickFunc = () =>
-        {
-            OnClicked(this, EventArgs.Empty);
-
-        };
-
+        homeBtn.onClick.AddListener(() => GoMainWindowNow());
     }
+
     private void OnEnable()
     {
-        audioSource.Stop();
-        //StartCoroutine(PlaySound());
+        if (audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
+
+        StartCoroutine(PlaySound());
         hitsText.text = points.hits + " acertos";
         missText.text = points.miss + " erros";
-        StartCoroutine(PlayLoop());
-    }
-
-    IEnumerator PlaySound()
-    {
-        audioSource.PlayOneShot(clip);
-        yield return new WaitForSeconds(15);
-        audioSource.Stop();
+        StartCoroutine(GoMainWindow());
     }
 
     private void OnDisable()
@@ -49,11 +40,25 @@ public class YouLoseWindow : MonoBehaviour
         points.Hide();
     }
 
-    IEnumerator PlayLoop()
+    private void GoMainWindowNow()
+    {
+        mainWindow.Show();
+        audioSource.Stop();
+        Hide();
+    }
+
+    IEnumerator PlaySound()
+    {
+        audioSource.PlayOneShot(soundLose);
+        yield return new WaitForSeconds(15);
+        audioSource.Stop();
+    }
+
+    IEnumerator GoMainWindow()
     {
         yield return new WaitForSeconds(20);
 
-        playGame.Show();
+        mainWindow.Show();
         Hide();
     }
 
@@ -66,4 +71,5 @@ public class YouLoseWindow : MonoBehaviour
     {
         gameObject.SetActive(false);
     }
+
 }

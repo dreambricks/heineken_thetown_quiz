@@ -9,26 +9,21 @@ using CodeMonkey.Utils;
 
 public class YouWinWindow : MonoBehaviour
 {
-    public event EventHandler OnClicked;
 
     public AudioSource audioSource;
     public AudioClip soundWin;
 
     public TextMeshProUGUI hitsText;
     public TextMeshProUGUI missText;
+    public Button homeBtn;
 
     [SerializeField] private Points points;
     [SerializeField] private MainWindow mainWindow;
 
-    private void Awake()
+
+    private void Start()
     {
-
-        transform.Find("YouWinBtn").GetComponent<Button_UI>().ClickFunc = () =>
-        {
-            OnClicked(this, EventArgs.Empty);
-
-        };
-
+        homeBtn.onClick.AddListener(() => GoMainWindowNow());
     }
 
     private void OnEnable()
@@ -49,7 +44,12 @@ public class YouWinWindow : MonoBehaviour
         points.Hide();
     }
 
-
+    private void GoMainWindowNow()
+    {
+        mainWindow.Show();
+        audioSource.Stop();
+        Hide();
+    }
 
     IEnumerator PlaySound()
     {
