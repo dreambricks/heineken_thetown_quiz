@@ -10,9 +10,19 @@ public class RegisterWindow : MonoBehaviour
     public Button policyBtn;
     public Button advanceBtn;
 
+    public InputField nome;
+    public InputField sobrenome;
+    public InputField cpf;
+    public InputField email;
+    public InputField dataAniversario;
+    public CheckButtonBehavior terms;
+    public CheckButtonBehavior policy;
+
     [SerializeField] private TermsWindow termsWindow;
     [SerializeField] private PrivacyPolicyWindow privacyPolicyWindow;
     [SerializeField] private GuessWhoWindow guessWhoWindow;
+    [SerializeField] private AlertPopup alertPopup;
+
 
     private void Start()
     {
@@ -35,8 +45,17 @@ public class RegisterWindow : MonoBehaviour
 
     private void GoGuessWhoWindow()
     {
-        guessWhoWindow.Show();
-        Hide();
+
+        if (nome.text != "" && sobrenome.text != "" && cpf.text != "" && email.text != "" && dataAniversario.text != "" && terms.isChecked && policy.isChecked)
+        {
+            guessWhoWindow.Show();
+            Hide();
+        }
+        else
+        {
+            alertPopup.Show();
+        }
+       
     }
 
 
