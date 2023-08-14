@@ -30,7 +30,7 @@ public class RegisterWindow : MonoBehaviour
 
     public TextAsset xmlAsset;
     private string xmlString;
-    public string foderOutput;
+    public string folderOutput;
     private string dataToEncrypt;
     private string fileName;
     private string stringEncrypted;
@@ -107,9 +107,9 @@ public class RegisterWindow : MonoBehaviour
         Debug.Log(formattedDateTime);
 
         stringEncrypted = RSAUtil.Encrypt(xmlString, dataToEncrypt);
-        fileName = "MoesBar" + "_" + formattedDateTime + ".enc";
+        fileName = "moesbar" + "_" + formattedDateTime + ".enc";
 
-        string fullPath = foderOutput + fileName;
+        string fullPath = Path.Combine(folderOutput, fileName);
 
         using (StreamWriter writer = new StreamWriter(fullPath))
         {
