@@ -10,32 +10,26 @@ public class TestDecrypt : MonoBehaviour
 {
 
     public Text text;
-    public TextAsset xmlAsset;
 
     public string filePath;
 
     private string xmlString;
     private string fileContent;
 
-    // Start is called before the first frame update
+
     void Start()
     {
 
-        if (xmlAsset != null)
-        {
-            XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.LoadXml(xmlAsset.text);
+        XmlDocument xmlDoc = new XmlDocument();
 
-            xmlString = xmlDoc.OuterXml;
+        string xmlPath = Application.streamingAssetsPath + "/keys/private_key.xml";
 
-            Debug.Log("XML as string:\n" + xmlString);
-        }
-        else
-        {
-            Debug.LogError("XML asset is missing!");
-        }
+        //xmlDoc.LoadXml(xmlAsset.text);
+        xmlDoc.Load(xmlPath);
 
-  
+        xmlString = xmlDoc.OuterXml;
+
+
 
         if (!string.IsNullOrEmpty(filePath) && File.Exists(filePath))
         {
@@ -54,7 +48,7 @@ public class TestDecrypt : MonoBehaviour
     private string ReadFileToString(string path)
     {
         byte[] fileBytes = File.ReadAllBytes(path);
-        return Encoding.UTF8.GetString(fileBytes); // Use a codificação apropriada aqui
+        return Encoding.UTF8.GetString(fileBytes);
     }
 
 

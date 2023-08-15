@@ -3251,8 +3251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 2107178064}
-  xmlAsset: {fileID: 4900000, guid: fed40299e23b97d418b67688583a6d4a, type: 3}
-  filePath: C:\Users\julio\Downloads\MoesBar_20230811_210736.enc
+  filePath: Assets/StreamingAssets/player_data/moesbar_20230815_102938.enc
 --- !u!1 &613269671
 GameObject:
   m_ObjectHideFlags: 0
@@ -6356,8 +6355,6 @@ MonoBehaviour:
   privacyPolicyWindow: {fileID: 528624677}
   guessWhoWindow: {fileID: 1295239171}
   alertPopup: {fileID: 1936302103}
-  xmlAsset: {fileID: 4900000, guid: fed40299e23b97d418b67688583a6d4a, type: 3}
-  foderOutput: Assets/Scripts/exemplo_rsa/
 --- !u!1 &1260674937
 GameObject:
   m_ObjectHideFlags: 0
@@ -7206,7 +7203,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1420107603
 RectTransform:
   m_ObjectHideFlags: 0

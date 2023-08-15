@@ -28,9 +28,8 @@ public class RegisterWindow : MonoBehaviour
     [SerializeField] private GuessWhoWindow guessWhoWindow;
     [SerializeField] private AlertPopup alertPopup;
 
-    public TextAsset xmlAsset;
     private string xmlString;
-    public string folderOutput;
+    private string folderOutput = Application.streamingAssetsPath;
     private string dataToEncrypt;
     private string fileName;
     private string stringEncrypted;
@@ -82,34 +81,32 @@ public class RegisterWindow : MonoBehaviour
 
     IEnumerator EncryptData()
     {
-        if (xmlAsset != null)
-        {
-            XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.LoadXml(xmlAsset.text);
+  
+        XmlDocument xmlDoc = new XmlDocument();
 
-            xmlString = xmlDoc.OuterXml;
+        string xmlPath = Path.Combine(Application.streamingAssetsPath,"keys/public_key.xml");
 
-            Debug.Log("XML as string:\n" + xmlString);
-        }
-        else
-        {
-            Debug.LogError("XML asset is missing!");
-        }
+        xmlDoc.Load(xmlPath);
+
+        xmlString = xmlDoc.OuterXml;
+
+        Debug.Log("XML as string:\n" + xmlString);
+    
 
         dataToEncrypt = nome.text + "," + sobrenome.text + "," + cpf.text + "," + dataAniversario.text + "," + email.text + "\n";
-        Debug.Log(dataToEncrypt);
 
         DateTime today = DateTime.Now;
         
         string formattedDate = today.ToString("yyyyMMdd HH:mm:ss");
-        Debug.Log(formattedDate);
+
         string formattedDateTime = FormatDateTimeString(formattedDate);
-        Debug.Log(formattedDateTime);
+
 
         stringEncrypted = RSAUtil.Encrypt(xmlString, dataToEncrypt);
-        fileName = "moesbar" + "_" + formattedDateTime + ".enc";
+        fileName = "player_data/" + "moesbar" + "_" + formattedDateTime + ".enc";
 
         string fullPath = Path.Combine(folderOutput, fileName);
+        Debug.Log(fullPath);
 
         using (StreamWriter writer = new StreamWriter(fullPath))
         {
@@ -122,7 +119,7 @@ public class RegisterWindow : MonoBehaviour
         // Carregue o arquivo binário
         byte[] fileData = System.IO.File.ReadAllBytes(fullPath);
         form.AddBinaryData("file", fileData, fileName);
-        form.AddField("nomeBar", "Moe's");
+        form.AddField("nomeBar", "moes");
 
         // Crie uma requisição UnityWebRequest para enviar o arquivo
         using (UnityWebRequest www = UnityWebRequest.Post("http://localhost:8080/api/players/upload", form))
