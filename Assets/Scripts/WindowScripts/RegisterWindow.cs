@@ -35,6 +35,7 @@ public class RegisterWindow : MonoBehaviour
     private string fileName;
     private string stringEncrypted;
 
+    public string barName;
 
     private void Start()
     {
@@ -70,7 +71,7 @@ public class RegisterWindow : MonoBehaviour
         if (nome.text != "" && sobrenome.text != "" && cpf.text != "" && email.text != "" && dataAniversario.text != "" && terms.isChecked && policy.isChecked)
         {
             guessWhoWindow.Show();
-            StartCoroutine(EncryptData());
+            EncryptData();
             Hide();
         }
         else
@@ -79,8 +80,7 @@ public class RegisterWindow : MonoBehaviour
         }
     }
 
-
-    IEnumerator EncryptData()
+    void EncryptData()
     {
         if (xmlAsset != null)
         {
@@ -107,7 +107,7 @@ public class RegisterWindow : MonoBehaviour
         Debug.Log(formattedDateTime);
 
         stringEncrypted = RSAUtil.Encrypt(xmlString, dataToEncrypt);
-        fileName = "moesbar" + "_" + formattedDateTime + ".enc";
+        fileName = string.Format("{0}_{1}.enc", barName, formattedDateTime);
 
         string fullPath = Path.Combine(folderOutput, fileName);
 
@@ -115,30 +115,6 @@ public class RegisterWindow : MonoBehaviour
         {
             writer.Write(stringEncrypted);
         }
-
-        // Crie um objeto WWWForm para armazenar o arquivo
-        WWWForm form = new WWWForm();
-
-        // Carregue o arquivo binário
-        byte[] fileData = System.IO.File.ReadAllBytes(fullPath);
-        form.AddBinaryData("file", fileData, fileName);
-        form.AddField("nomeBar", "Moe's");
-
-        // Crie uma requisição UnityWebRequest para enviar o arquivo
-        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost:8080/api/players/upload", form))
-        {
-            yield return www.SendWebRequest(); // Envie a requisição
-
-            if (www.result == UnityWebRequest.Result.Success)
-            {
-                Debug.Log("Arquivo enviado com sucesso!");
-            }
-            else
-            {
-                Debug.Log("Erro ao enviar o arquivo: " + www.error);
-            }
-        }
-
     }
 
     private string FormatDateTimeString(string input)
@@ -156,11 +132,11 @@ public class RegisterWindow : MonoBehaviour
         }
     }
 
-
     public void Show()
     {
         gameObject.SetActive(true);
     }
+
     public void Hide()
     {
         gameObject.SetActive(false);

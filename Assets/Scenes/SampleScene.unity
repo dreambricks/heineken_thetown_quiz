@@ -3038,6 +3038,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 583199933}
   m_CullTransparentMesh: 1
+--- !u!1 &595042073
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 595042075}
+  - component: {fileID: 595042074}
+  m_Layer: 0
+  m_Name: UserDataUploader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &595042074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595042073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b07fa6b6d446c24798866747ebac2fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outputFolder: user_data
+  backupFolder: user_data_backup
+  uploadURL: http://localhost:8000
+  barName: tablet1
+  checkIntervalSeconds: 30
+--- !u!4 &595042075
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595042073}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &598536915
 GameObject:
   m_ObjectHideFlags: 0
@@ -3252,7 +3301,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 2107178064}
   xmlAsset: {fileID: 4900000, guid: fed40299e23b97d418b67688583a6d4a, type: 3}
-  filePath: C:\Users\julio\Downloads\MoesBar_20230811_210736.enc
+  filePath: C:\Users\conta\OneDrive\Documents\dudu\camoes.enc
 --- !u!1 &613269671
 GameObject:
   m_ObjectHideFlags: 0
@@ -4247,7 +4296,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &754417669
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6356,8 +6405,9 @@ MonoBehaviour:
   privacyPolicyWindow: {fileID: 528624677}
   guessWhoWindow: {fileID: 1295239171}
   alertPopup: {fileID: 1936302103}
-  xmlAsset: {fileID: 4900000, guid: fed40299e23b97d418b67688583a6d4a, type: 3}
-  foderOutput: Assets/Scripts/exemplo_rsa/
+  xmlAsset: {fileID: 4900000, guid: e1a52293958c28443a86fcd35770d6c3, type: 3}
+  folderOutput: user_data
+  barName: moes
 --- !u!1 &1260674937
 GameObject:
   m_ObjectHideFlags: 0
@@ -7206,7 +7256,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1420107603
 RectTransform:
   m_ObjectHideFlags: 0

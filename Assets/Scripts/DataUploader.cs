@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.IO;
+using System.Net;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -11,27 +11,46 @@ public class DataUploader : MonoBehaviour
     public string backupFolder;
     public string uploadURL;
     public string barName;
-    public int checkIntervalMs;
-    private DateTime lastCheck;
+    public int checkIntervalSeconds;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        CheckIfDirectoryExists(outputFolder);
+        CheckIfDirectoryExists(backupFolder);
+        StartCoroutine(Worker());
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator Worker()
     {
-        if (!IsTimeToCheck())
+        while (true)
         {
-            return;
-        }
-    }
+            yield return new WaitForSeconds(checkIntervalSeconds);
 
-    bool IsTimeToCheck()
-    {
-        return ((TimeSpan)(DateTime.Now - lastCheck)).TotalMilliseconds >= checkIntervalMs;
+            // check if internet is available
+            if (!CheckForInternetConnection())
+            {
+                Debug.Log("no internet available");
+                //lastCheck = DateTime.Now;
+                continue;
+            }
+
+            // check if there are files to process
+            // get a list of files in the output folder
+            string[] fileEntries = Directory.GetFiles(outputFolder);
+            if (fileEntries.Length == 0)
+            {
+                Debug.Log("no files to process");
+                continue;
+            }
+
+            foreach (string filepath in fileEntries)
+            {
+                string filename = Path.GetFileName(filepath);
+                Debug.Log(string.Format("processing file '{0}'", filename));
+                yield return StartCoroutine(SendData(filename));
+            }
+        }
     }
 
     void BackupFile(string filename)
@@ -47,8 +66,10 @@ public class DataUploader : MonoBehaviour
         // Crie um objeto WWWForm para armazenar o arquivo
         WWWForm form = new WWWForm();
 
+        string fullPath = Path.Combine(outputFolder, filename);
+
         // Carregue o arquivo binario
-        byte[] fileData = System.IO.File.ReadAllBytes(Path.Combine(outputFolder, filename));
+        byte[] fileData = System.IO.File.ReadAllBytes(fullPath);
         form.AddBinaryData("file", fileData, filename);
         form.AddField("nomeBar", barName);
 
@@ -66,6 +87,34 @@ public class DataUploader : MonoBehaviour
             {
                 Debug.Log(string.Format("Erro ao enviar o arquivo '{0}': {1}", filename, www.error));
             }
+        }
+    }
+
+    public static bool CheckForInternetConnection(int timeoutMs = 2000)
+    {
+        try
+        {
+            string url =  "http://www.gstatic.com/generate_204";
+
+            var request = (HttpWebRequest)WebRequest.Create(url);
+            request.KeepAlive = false;
+            request.Timeout = timeoutMs;
+            using (var response = (HttpWebResponse)request.GetResponse())
+                return true;
+        }
+        catch
+        {
+            return false;
+        }
+    }
+
+    public static void CheckIfDirectoryExists(string path)
+    {
+        bool exists = System.IO.Directory.Exists(path);
+
+        if (!exists)
+        {
+            System.IO.Directory.CreateDirectory(path);
         }
     }
 }
