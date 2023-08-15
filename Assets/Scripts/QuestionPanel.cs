@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting.Antlr3.Runtime.Collections;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,6 +17,7 @@ public class QuestionPanel : MonoBehaviour
     [SerializeField] private Points points;
 
     public Button[] buttons;
+    public Image[] nQuestionimages;
     public Text textUI;
     public Text acertouErrou;
 
@@ -27,6 +29,10 @@ public class QuestionPanel : MonoBehaviour
     public AudioClip correct;
     public AudioClip incorrect;
     public AudioClip music;
+
+    public Slider progressBar;
+    public float barTotalTime = 15f;
+    private Coroutine progressCoroutine;
 
     private void Start()
     {
@@ -55,6 +61,47 @@ public class QuestionPanel : MonoBehaviour
         points.Show();
         points.hits= 0;
         points.miss= 0;
+
+    }
+
+
+    private IEnumerator ProgressCoroutine()
+    {
+        float barCurrentTime = 0f;
+
+        while (barCurrentTime <= barTotalTime)
+        {
+            float progress = barCurrentTime / barTotalTime;
+            progressBar.value = progress;
+
+            barCurrentTime += Time.deltaTime;
+            yield return null;
+        }
+
+        for (int i = 0; i < buttons.Length; i++)
+        {
+            buttons[i].GetComponent<Image>().color = Color.red;
+        }
+
+        nQuestionimages[currentQuestionIndex].color = Color.red;
+
+        // Encontrar o índice do botão com a resposta correta
+        int correctButtonIndex = GetCorrectButtonIndex();
+        buttons[correctButtonIndex].GetComponent<Image>().color = Color.green;
+
+        audioSource.PlayOneShot(incorrect);
+
+        acertouErrou.gameObject.SetActive(true);
+        acertouErrou.text = "O tempo acabou!";
+        acertouErrou.color = Color.red;
+
+        points.miss++;
+
+        DisableButtons();
+        yield return new WaitForSeconds(3);
+        acertouErrou.gameObject.SetActive(false);
+
+        CheckToContinueQuestions();
 
     }
 
@@ -97,6 +144,8 @@ public class QuestionPanel : MonoBehaviour
         {
             buttons[i].GetComponentInChildren<Text>().text = alternativeList[i];
         }
+
+        progressCoroutine = StartCoroutine(ProgressCoroutine());
     }
 
     private AudioClip ChooseRandomItem(List<AudioClip> lista)
@@ -152,6 +201,7 @@ public class QuestionPanel : MonoBehaviour
         {
             // Resposta correta
             buttons[buttonIndex].GetComponent<Image>().color = Color.green;
+            nQuestionimages[currentQuestionIndex].color= Color.green;
 
             audioSource.PlayOneShot(correct);
 
@@ -165,6 +215,8 @@ public class QuestionPanel : MonoBehaviour
         {
             // Resposta incorreta
             buttons[buttonIndex].GetComponent<Image>().color = Color.red;
+            nQuestionimages[currentQuestionIndex].color = Color.red;
+
             // Encontrar o índice do botão com a resposta correta
             int correctButtonIndex = GetCorrectButtonIndex();
             buttons[correctButtonIndex].GetComponent<Image>().color = Color.green;
@@ -181,14 +233,21 @@ public class QuestionPanel : MonoBehaviour
 
         // Desabilitar os botões após a resposta
         DisableButtons();
+        StopCoroutine(progressCoroutine);
         yield return new WaitForSeconds(3);
         acertouErrou.gameObject.SetActive(false);
 
+        CheckToContinueQuestions();
 
+    }
+
+    void CheckToContinueQuestions()
+    {
         currentQuestionIndex++;
         if (currentQuestionIndex < questionPool.Count)
         {
             EnableButtons();
+            StopCoroutine(progressCoroutine);
             BuildQuestion(currentQuestionIndex);
             audioSource.Stop();
             audioSource.PlayOneShot(music);
@@ -206,6 +265,11 @@ public class QuestionPanel : MonoBehaviour
             }
             EnableButtons();
             currentQuestionIndex = 0;
+            for (int i = 0; i < nQuestionimages.Length; i++)
+            {
+                nQuestionimages[i].color = Color.white;
+            }
+
             playGame.Hide();
         }
     }

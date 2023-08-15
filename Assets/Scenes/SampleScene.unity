@@ -631,8 +631,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 574.49426, y: -134.68823}
-  m_SizeDelta: {x: 546.112, y: 191.1499}
+  m_AnchoredPosition: {x: 574.49426, y: -158.0122}
+  m_SizeDelta: {x: 557.8118, y: 181.4257}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &54488117
 MonoBehaviour:
@@ -862,6 +862,163 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 70786529}
   m_CullTransparentMesh: 1
+--- !u!1 &70989455
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 70989456}
+  - component: {fileID: 70989458}
+  - component: {fileID: 70989457}
+  m_Layer: 5
+  m_Name: q2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &70989456
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70989455}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1984401761}
+  m_Father: {fileID: 485836722}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -51.841858, y: 437}
+  m_SizeDelta: {x: 69.8803, y: 69.8803}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &70989457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70989455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 60bcd4de1b097d8458f4e54d2c2cae80, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &70989458
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70989455}
+  m_CullTransparentMesh: 1
+--- !u!1 &71539492
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 71539493}
+  - component: {fileID: 71539495}
+  - component: {fileID: 71539494}
+  m_Layer: 5
+  m_Name: Text (Legacy) (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &71539493
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 71539492}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1672624017}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 229.2909, y: 109.0159}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &71539494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 71539492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0.52156866, b: 0.22745098, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 8c6834828e9d636499dd388288f52d9b, type: 3}
+    m_FontSize: 45
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 252
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 4
+--- !u!222 &71539495
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 71539492}
+  m_CullTransparentMesh: 1
 --- !u!1 &73996837
 GameObject:
   m_ObjectHideFlags: 0
@@ -1026,8 +1183,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 575.67676, y: -394}
-  m_SizeDelta: {x: 543.747, y: 191.1499}
+  m_AnchoredPosition: {x: 574.5, y: -390.7502}
+  m_SizeDelta: {x: 557.81, y: 182.049}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &162305417
 MonoBehaviour:
@@ -1308,7 +1465,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 3
     m_MaxSize: 104
-    m_Alignment: 4
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 1
@@ -1640,8 +1797,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.7344074}
   m_AnchorMax: {x: 1, y: 0.83322227}
-  m_AnchoredPosition: {x: 0, y: 194.22606}
-  m_SizeDelta: {x: 0, y: 133.45428}
+  m_AnchoredPosition: {x: 0, y: 140}
+  m_SizeDelta: {x: 0, y: 88.7994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &236989562
 MonoBehaviour:
@@ -1665,11 +1822,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 3e8f6bf1aac854c44b6362f31fec67b3, type: 3}
-    m_FontSize: 80
+    m_FontSize: 105
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
-    m_MaxSize: 104
+    m_MaxSize: 105
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -1930,14 +2087,14 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 282014166}
   m_TextComponent: {fileID: 1079582973}
   m_Placeholder: {fileID: 741457792}
-  m_ContentType: 0
+  m_ContentType: 9
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 2
   m_LineType: 0
   m_HideMobileInput: 0
   m_CharacterValidation: 0
-  m_CharacterLimit: 0
+  m_CharacterLimit: 10
   m_OnSubmit:
     m_PersistentCalls:
       m_Calls: []
@@ -2006,6 +2163,82 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputField: {fileID: 282014165}
+--- !u!1 &292146520
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 292146521}
+  - component: {fileID: 292146523}
+  - component: {fileID: 292146522}
+  m_Layer: 5
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &292146521
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292146520}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1374288015}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.25}
+  m_AnchorMax: {x: 1, y: 0.75}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &292146522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292146520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 155ae6d13f09e004d9afe997eca5f9b7, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &292146523
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292146520}
+  m_CullTransparentMesh: 1
 --- !u!1 &303548709
 GameObject:
   m_ObjectHideFlags: 0
@@ -2201,7 +2434,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b907ed4b6c34164458093634dc01bce0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c4136b6836770b346881e089eefd3464, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2256,6 +2489,8 @@ RectTransform:
   - {fileID: 1925472896}
   - {fileID: 162305416}
   - {fileID: 1388693516}
+  - {fileID: 485836722}
+  - {fileID: 1999620672}
   m_Father: {fileID: 972216729}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2324,6 +2559,12 @@ MonoBehaviour:
   - {fileID: 1925472897}
   - {fileID: 162305417}
   - {fileID: 1388693517}
+  nQuestionimages:
+  - {fileID: 1480256320}
+  - {fileID: 70989457}
+  - {fileID: 1850064185}
+  - {fileID: 1672624018}
+  - {fileID: 1349678667}
   textUI: {fileID: 236989562}
   acertouErrou: {fileID: 167463866}
   questions:
@@ -2347,6 +2588,8 @@ MonoBehaviour:
   correct: {fileID: 8300000, guid: 6e864852548b19243a7725418c9f6a61, type: 3}
   incorrect: {fileID: 8300000, guid: 2cb2a338de0b2694e8a9c0f8b6960043, type: 3}
   music: {fileID: 0}
+  progressBar: {fileID: 1999620673}
+  barTotalTime: 15
 --- !u!1 &358844765
 GameObject:
   m_ObjectHideFlags: 0
@@ -2587,6 +2830,127 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 448074205}
   m_CullTransparentMesh: 1
+--- !u!1 &466964854
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 466964855}
+  - component: {fileID: 466964857}
+  - component: {fileID: 466964856}
+  m_Layer: 5
+  m_Name: Text (Legacy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &466964855
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466964854}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1480256319}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 229.2909, y: 109.0159}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &466964856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466964854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0.52156866, b: 0.227451, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 8c6834828e9d636499dd388288f52d9b, type: 3}
+    m_FontSize: 45
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 4
+    m_MaxSize: 252
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: 1
+--- !u!222 &466964857
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466964854}
+  m_CullTransparentMesh: 1
+--- !u!1 &485836721
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 485836722}
+  m_Layer: 5
+  m_Name: NQuestionBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &485836722
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485836721}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1480256319}
+  - {fileID: 70989456}
+  - {fileID: 1850064184}
+  - {fileID: 1672624017}
+  - {fileID: 1349678666}
+  m_Father: {fileID: 349912025}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -70, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &489721773
 GameObject:
   m_ObjectHideFlags: 0
@@ -2804,7 +3168,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2846,6 +3210,43 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 530379495}
   m_CullTransparentMesh: 1
+--- !u!1 &553392012
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 553392013}
+  m_Layer: 5
+  m_Name: Handle Slide Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &553392013
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553392012}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1450104299}
+  m_Father: {fileID: 1374288015}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -20, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &575374405
 GameObject:
   m_ObjectHideFlags: 0
@@ -2925,118 +3326,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 575374405}
-  m_CullTransparentMesh: 1
---- !u!1 &583199933
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 583199934}
-  - component: {fileID: 583199936}
-  - component: {fileID: 583199935}
-  m_Layer: 5
-  m_Name: Content
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &583199934
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 583199933}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1513175497}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.0003572304}
-  m_SizeDelta: {x: 0, y: 549.8738}
-  m_Pivot: {x: 0, y: 1}
---- !u!114 &583199935
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 583199933}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-    Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s,
-    when an unknown printer took a galley of type and scrambled it to make a type
-    specimen book. It has survived not only five centuries, but also the leap into
-    electronic typesetting, remaining essentially unchanged. It was popularised in
-    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-    and more recently with desktop publishing software like Aldus PageMaker including
-    versions of Lorem Ipsum.t is a long established fact that a reader will be distracted
-    by the readable content of a page when looking at its layout. The point of using
-    Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
-    opposed to using ''Content here, content here'', making it look like readable
-    English. Many desktop publishing packages and web page editors now use Lorem
-    Ipsum as their default model text, and a search for ''lorem ipsum'' will uncover
-    many web sites still in their infancy. Various versions have evolved over the
-    years, sometimes by accident, sometimes on purpose (injected humour and the like).Contrary
-    to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece
-    of classical Latin literature from 45 BC, making it over 2000 years old. Richard
-    McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up
-    one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage,
-    and going through the cites of the word in classical literature, discovered the
-    undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de
-    Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written
-    in 45 BC. This book is a treatise on the theory of ethics, very popular during
-    the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..",
-    comes from a line in section 1.10.32.
-
-
-
-    The standard chunk of Lorem Ipsum
-    used since the 1500s is reproduced below for those interested. Sections 1.10.32
-    and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced
-    in their exact original form, accompanied by English versions from the 1914 translation
-    by H. Rackham.'
---- !u!222 &583199936
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 583199933}
   m_CullTransparentMesh: 1
 --- !u!1 &598536915
 GameObject:
@@ -3483,7 +3772,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Content: {fileID: 583199934}
+  m_Content: {fileID: 1725455809}
   m_Horizontal: 0
   m_Vertical: 1
   m_MovementType: 1
@@ -3494,7 +3783,7 @@ MonoBehaviour:
   m_Viewport: {fileID: 1513175497}
   m_HorizontalScrollbar: {fileID: 962661516}
   m_VerticalScrollbar: {fileID: 751239110}
-  m_HorizontalScrollbarVisibility: 2
+  m_HorizontalScrollbarVisibility: 0
   m_VerticalScrollbarVisibility: 2
   m_HorizontalScrollbarSpacing: -3
   m_VerticalScrollbarSpacing: -3
@@ -4186,8 +4475,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1132537924}
   m_HandleRect: {fileID: 1132537923}
   m_Direction: 2
-  m_Value: 0.99999845
-  m_Size: 0.5640986
+  m_Value: 1
+  m_Size: 0.06307782
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4199,7 +4488,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 751239108}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -4407,6 +4696,123 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 764571505}
   m_CullTransparentMesh: 1
+--- !u!1 &767969016
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 767969017}
+  - component: {fileID: 767969019}
+  - component: {fileID: 767969018}
+  m_Layer: 5
+  m_Name: Text (Legacy) (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &767969017
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 767969016}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1850064184}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 229.2909, y: 109.0159}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &767969018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 767969016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0.52156866, b: 0.22745098, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 8c6834828e9d636499dd388288f52d9b, type: 3}
+    m_FontSize: 45
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 252
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 3
+--- !u!222 &767969019
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 767969016}
+  m_CullTransparentMesh: 1
+--- !u!1 &776402864
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 776402865}
+  m_Layer: 5
+  m_Name: Handle Slide Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &776402865
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776402864}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1763564379}
+  m_Father: {fileID: 1999620672}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -20, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &790746113
 GameObject:
   m_ObjectHideFlags: 0
@@ -4463,6 +4869,43 @@ MonoBehaviour:
   points: {fileID: 1269708522}
   youWinWindow: {fileID: 1160520023}
   youLoseWindow: {fileID: 969096610}
+--- !u!1 &831033094
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 831033095}
+  m_Layer: 5
+  m_Name: Fill Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &831033095
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 831033094}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2132040880}
+  m_Father: {fileID: 1374288015}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.25}
+  m_AnchorMax: {x: 1, y: 0.75}
+  m_AnchoredPosition: {x: 2.5, y: 0}
+  m_SizeDelta: {x: -5, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &882550601
 GameObject:
   m_ObjectHideFlags: 0
@@ -4524,7 +4967,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cbf15f674128c3147bd1ba1755453205, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 809965c38d8c56e459f40f1e530d8d41, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4710,7 +5153,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5d0ad8a235cef70458b7bd2ef1568c89, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 57bad0bb0b549c6468cadcb1876484e0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4783,7 +5226,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &962661515
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4848,7 +5291,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 530379497}
   m_HandleRect: {fileID: 530379496}
   m_Direction: 0
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -5064,7 +5507,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b84bba183d3939f4ca92a47681dd7e0f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 453432cedcf24f04d91b0a777126666f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5273,6 +5716,7 @@ RectTransform:
   - {fileID: 1160520022}
   - {fileID: 969096609}
   - {fileID: 1420107603}
+  - {fileID: 1784026687}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5702,6 +6146,82 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10148b5c06f76da49b390f061643d49f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1104365040
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1104365041}
+  - component: {fileID: 1104365043}
+  - component: {fileID: 1104365042}
+  m_Layer: 5
+  m_Name: Fill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1104365041
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104365040}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1770887746}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -2.5, y: 0}
+  m_SizeDelta: {x: 5, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1104365042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104365040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 1, b: 0.09055519, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 155ae6d13f09e004d9afe997eca5f9b7, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1104365043
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104365040}
+  m_CullTransparentMesh: 1
 --- !u!1 &1115818853
 GameObject:
   m_ObjectHideFlags: 0
@@ -5843,7 +6363,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a796cc16413958d4a9092312bc4ad87f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dc39106889e7ff147b98b1b8280f1c60, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5894,8 +6414,8 @@ RectTransform:
   m_Father: {fileID: 943359059}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.43590072}
-  m_AnchorMax: {x: 1, y: 0.9999993}
+  m_AnchorMin: {x: 0, y: 0.9369222}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -6701,7 +7221,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 39f00776c7f58aa4fb522b861672cbfc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 677c604d42177bd4db0d1dd759f3250a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6718,6 +7238,83 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1343569117}
+  m_CullTransparentMesh: 1
+--- !u!1 &1349678665
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1349678666}
+  - component: {fileID: 1349678668}
+  - component: {fileID: 1349678667}
+  m_Layer: 5
+  m_Name: a5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1349678666
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349678665}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1782882250}
+  m_Father: {fileID: 485836722}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 367.43976, y: 437}
+  m_SizeDelta: {x: 69.8803, y: 69.8803}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1349678667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349678665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 60bcd4de1b097d8458f4e54d2c2cae80, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1349678668
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349678665}
   m_CullTransparentMesh: 1
 --- !u!1 &1361002770
 GameObject:
@@ -6854,6 +7451,97 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1361002770}
   m_CullTransparentMesh: 1
+--- !u!1 &1374288014
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1374288015}
+  - component: {fileID: 1374288016}
+  m_Layer: 5
+  m_Name: Slider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1374288015
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374288014}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 292146521}
+  - {fileID: 831033095}
+  - {fileID: 553392013}
+  m_Father: {fileID: 1922079443}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 20}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1374288016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374288014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1450104300}
+  m_FillRect: {fileID: 2132040880}
+  m_HandleRect: {fileID: 1450104299}
+  m_Direction: 0
+  m_MinValue: 0
+  m_MaxValue: 1
+  m_WholeNumbers: 0
+  m_Value: 1
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1388693515
 GameObject:
   m_ObjectHideFlags: 0
@@ -6891,8 +7579,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1206, y: -395}
-  m_SizeDelta: {x: 543.747, y: 191.1499}
+  m_AnchoredPosition: {x: 1205, y: -390.74985}
+  m_SizeDelta: {x: 555.3, y: 182.05}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1388693517
 MonoBehaviour:
@@ -7170,7 +7858,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c48c55b5da554e847ad23691f863ecf9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7f06299411e1b7f40ab2f8a84755aaeb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7464,6 +8152,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1438209921}
   m_CullTransparentMesh: 1
+--- !u!1 &1450104298
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1450104299}
+  - component: {fileID: 1450104301}
+  - component: {fileID: 1450104300}
+  m_Layer: 5
+  m_Name: Handle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1450104299
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450104298}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 553392013}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 20, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1450104300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450104298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1450104301
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450104298}
+  m_CullTransparentMesh: 1
 --- !u!1 &1460426096
 GameObject:
   m_ObjectHideFlags: 0
@@ -7586,6 +8350,83 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1460426096}
   m_CullTransparentMesh: 1
+--- !u!1 &1480256318
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1480256319}
+  - component: {fileID: 1480256321}
+  - component: {fileID: 1480256320}
+  m_Layer: 5
+  m_Name: q1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1480256319
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480256318}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 466964855}
+  m_Father: {fileID: 485836722}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -193, y: 437}
+  m_SizeDelta: {x: 69.8803, y: 69.8803}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1480256320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480256318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 60bcd4de1b097d8458f4e54d2c2cae80, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1480256321
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480256318}
+  m_CullTransparentMesh: 1
 --- !u!1 &1509526750
 GameObject:
   m_ObjectHideFlags: 0
@@ -7657,14 +8498,14 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 583199934}
+  - {fileID: 1725455809}
   m_Father: {fileID: 663359131}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -17, y: -17}
+  m_SizeDelta: {x: -17, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1513175498
 MonoBehaviour:
@@ -8352,6 +9193,83 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isChecked: 0
+--- !u!1 &1672624016
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1672624017}
+  - component: {fileID: 1672624019}
+  - component: {fileID: 1672624018}
+  m_Layer: 5
+  m_Name: a4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1672624017
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672624016}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 71539493}
+  m_Father: {fileID: 485836722}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 231.87207, y: 437}
+  m_SizeDelta: {x: 69.8803, y: 69.8803}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1672624018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672624016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 60bcd4de1b097d8458f4e54d2c2cae80, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1672624019
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672624016}
+  m_CullTransparentMesh: 1
 --- !u!1 &1673475929
 GameObject:
   m_ObjectHideFlags: 0
@@ -8626,6 +9544,479 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1697685459}
   m_CullTransparentMesh: 1
+--- !u!1 &1725455808
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1725455809}
+  - component: {fileID: 1725455811}
+  - component: {fileID: 1725455810}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1725455809
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725455808}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1513175497}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.09991455, y: -2429.8953}
+  m_SizeDelta: {x: -0.19995117, y: 4859.79}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1725455810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725455808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "Pol\xEDtica de Privacidade\r\nA sua privacidade \xE9 muito importante
+    para o Grupo HEINEKEN no Brasil (\u201CHEINEKEN Brasil\u201D ou \u201Ca empresa\u201D),
+    controladora respons\xE1vel pela disponibiliza\xE7\xE3o da plataforma https://www.amstelbrasil.com
+    (\u201CPlataforma\u201D). Por isso, esta Pol\xEDtica de Privacidade (\u201CPol\xEDtica\u201D),
+    disp\xF5e sobre o tratamento de dados pessoais realizado em raz\xE3o dessa Plataforma,
+    que pode, a depender do caso, ser complementada por pol\xEDticas espec\xEDficas.\r\nO
+    tratamento de dados pessoais realizado est\xE1 sujeito \xE0 legisla\xE7\xE3o
+    brasileira, em especial a Lei n\xBA 13.709/2018 (\u201CLGPD\u201D) e observa
+    os seguintes princ\xEDpios: (a) limita\xE7\xE3o de uso de dados pessoais ao extremamente
+    necess\xE1rio para atender aos prop\xF3sitos empresariais; (b) acesso aos dados
+    pessoais apenas por pessoas imprescind\xEDveis e elimina\xE7\xE3o de dados quando
+    n\xE3o mais necess\xE1rios; (c) cuidado adicional no tratamento de dados pessoais
+    sens\xEDveis; (d) transpar\xEAncia com clientes, parceiros e colaboradores; (e)
+    seguran\xE7a dos dados pessoais; e (f) estabelecimento de contrato de tratamento
+    de dados pessoais com terceiros.\r\n\xC9 muito importante que voc\xEA leia este
+    documento com aten\xE7\xE3o e entre em contato com a HEINEKEN Brasil conforme
+    indicado ao final desta Pol\xEDtica, caso tenha qualquer d\xFAvida.\r\nAo utilizar
+    a Plataforma ou fornecer seus dados pessoais, voc\xEA declara ci\xEAncia quanto
+    \xE0s pr\xE1ticas descritas nesta Pol\xEDtica.\r\n \r\nDADOS PESSOAIS COLETADOS
+    E FONTES DE COLETA\r\nA HEINEKEN Brasil poder\xE1 coletar os seguintes tipos
+    de dados pessoais (a) fornecidos diretamente por voc\xEA, (b) coletados automaticamente
+    sobre voc\xEA e/ou (c) obtidos de outras fontes:\r\n\u25AA\tDados fornecidos
+    diretamente por voc\xEA: S\xE3o as informa\xE7\xF5es que voc\xEA insere ativamente
+    na Plataforma como nome completo, telefone, e-mail, endere\xE7o, data de nascimento,
+    login e senha, informa\xE7\xF5es sobre o uso de nossos produtos/servi\xE7os,
+    dados de pagamento. Compreende, ainda, os dados relativos \xE0 sua participa\xE7\xE3o
+    em promo\xE7\xF5es e concursos, viabilizar a realiza\xE7\xE3o de reservas e a
+    aquisi\xE7\xE3o de ingressos para visita em nossas f\xE1bricas e/ou permitir
+    a entrega de produtos/servi\xE7os a voc\xEA.\r\n\u25AA\tDados coletados automaticamente:
+    S\xE3o as informa\xE7\xF5es coletadas automaticamente sobre voc\xEA ao utilizar
+    a Plataforma, como endere\xE7o de IP (com data e hora), tipo de dispositivo utilizado
+    para acessar a Plataforma, tipo de navegador utilizado, localiza\xE7\xE3o de
+    seu dispositivo, n\xFAmero identificador do seu dispositivo, sequ\xEAncia de
+    cliques, p\xE1ginas acessadas e buscas realizadas. Al\xE9m disso, podem ser armazenadas
+    grava\xE7\xF5es telef\xF4nicas entre voc\xEA e a HEINEKEN Brasil e/ou quaisquer
+    outros dados decorrentes da sua intera\xE7\xE3o com a empresa via canais de contato
+    e/ou redes sociais.\r\n\u25AA\tDados coletados de outras fontes: Caso voc\xEA
+    utilize uma conta de rede social (como o Facebook) para criar cadastro na Plataforma,
+    ser\xE3o coletados dados pessoais indicados no momento da vincula\xE7\xE3o da
+    conta da rede social, o que incluir\xE1: nome, endere\xE7o de e-mail e lista
+    de amigos. Ainda, ser\xE3o obtidas informa\xE7\xF5es sobre voc\xEA de outros
+    fornecedores de produtos, servi\xE7os, sites e aplicativos, al\xE9m de informa\xE7\xF5es
+    constantes de fontes p\xFAblicas e comercialmente dispon\xEDveis (conforme permitido
+    pela lei). Sempre que a HEINEKEN Brasil coletar informa\xE7\xF5es sobre voc\xEA
+    de terceiros, far\xE1 seu melhor para garantir que esses terceiros tenham permiss\xE3o
+    para compartilhar tais informa\xE7\xF5es com a empresa e que o uso dos dados
+    pessoais esteja em conformidade com as leis de prote\xE7\xE3o de dados pessoais
+    aplic\xE1veis.\r\nPoder\xE3o ser coletados, ainda, dados que voc\xEA fornece
+    em respostas \xE0 pesquisa de opini\xE3o e mercado, ou outros tipos de pesquisa
+    que voc\xEA decida participar, organizadas e/ou patrocinadas por/em nome da HEINEKEN
+    Brasil.\r\nTamb\xE9m poder\xE3o ser coletados dados pessoais sobre voc\xEA, seu
+    dispositivo ou utiliza\xE7\xE3o da Plataforma e/ou produtos/servi\xE7os sob a
+    marca HEINEKEN Brasil da maneira informada quando da coleta e/ou com a sua autoriza\xE7\xE3o
+    espec\xEDfica, quando exigido pela legisla\xE7\xE3o aplic\xE1vel.\r\nVoc\xEA
+    reconhece ser o \xFAnico respons\xE1vel pela veracidade, exatid\xE3o e autenticidade
+    dos dados fornecidos, comprometendo-se, ainda, com a guarda, sigilo e boa utiliza\xE7\xE3o
+    de eventual login e senha cadastrados, isentando a HEINEKEN Brasil de qualquer
+    responsabilidade nesse sentido.\r\nA Plataforma n\xE3o coleta ou solicita intencionalmente
+    dados pessoais de menores de 18 (dezoito) anos. Se voc\xEA tiver menos de 18
+    (dezoito) anos, n\xE3o utilize a Plataforma e/ou forne\xE7a quaisquer dados.
+    Se tomado conhecimento da coleta de dados em contrariedade ao aqui disposto,
+    os dados ser\xE3o eliminados imediatamente.\r\n \r\nUSO DE COOKIES\r\nS\xE3o
+    utilizados cookies para diversas fun\xE7\xF5es, entre elas: (a) permitir que
+    voc\xEA navegue e fa\xE7a uso de todas as funcionalidades dispon\xEDveis na Plataforma,
+    (b) viabilizar an\xE1lise da sua intera\xE7\xE3o com a Plataforma, (c) promover
+    uma experi\xEAncia personalizada, e (d) avaliar a efic\xE1cia da comunica\xE7\xE3o
+    e publicidade, ao, por exemplo, entender e analisar tend\xEAncias e aprender
+    sobre o seu comportamento.\r\nPara obter mais detalhes sobre o uso de cookies,
+    consulte tamb\xE9m a Pol\xEDtica de Cookies da HEINEKEN Brasil.\r\nVoc\xEA poder\xE1
+    gerenciar prefer\xEAncias de cookies a partir da configura\xE7\xE3o do seu navegador
+    ou dispositivo, por\xE9m isso poder\xE1 impedir o funcionamento de determinadas
+    funcionalidades da Plataforma.\r\n \r\nUTILIZA\xC7\xC3O DOS DADOS PESSOAIS COLETADOS\r\nSeus
+    dados pessoais podem ser coletados, armazenados, transferidos ou de qualquer
+    outra forma usado por n\xF3s das seguintes formas e fins:\r\n\u25AA\tPermitir
+    sua participa\xE7\xE3o em promo\xE7\xF5es, concursos e sorteios: Se voc\xEA participar
+    de campanhas promocionais, voc\xEA pode ser solicitado a informar seu nome, e-mail,
+    endere\xE7o, telefone e fornecer respostas a outras perguntas relacionadas \xE0
+    atividade espec\xEDfica. Esta informa\xE7\xE3o \xE9 utilizada para permitir sua
+    participa\xE7\xE3o nas campanhas ou eventos, bem como para comunica\xE7\xE3o
+    e envio de eventuais pr\xEAmios a voc\xEA.\r\n\u25AA\tEmitir ingressos para visita
+    nas f\xE1bricas da HEINEKEN Brasil, processar pagamento e viabilizar a entrega
+    de produtos/servi\xE7os adquiridos por voc\xEA e/ou sua participa\xE7\xE3o em
+    eventos: S\xE3o necess\xE1rios seu nome, e-mail, nome de quem usar\xE1 ingresso
+    ou destinat\xE1rio do produto/servi\xE7o (caso n\xE3o seja voc\xEA), data de
+    nascimento, seus dados de pagamento, e restri\xE7\xF5es alimentares. Esses dados
+    tamb\xE9m ser\xE3o usados para fins de gerenciamento de vendas e permitem que
+    possamos executar um contrato com voc\xEA e/ou cumprir nossas obriga\xE7\xF5es
+    legais ou regulat\xF3rias.\r\n\u25AA\tComunica\xE7\xE3o: Os dados pessoais coletados
+    tamb\xE9m ser\xE3o utilizados para enviar avisos e notifica\xE7\xF5es importantes
+    relacionados a voc\xEA, como altera\xE7\xF5es dessa Pol\xEDtica. Ainda, os dados
+    pessoais ser\xE3o ainda utilizados para responder a quaisquer intera\xE7\xF5es
+    com a HEINEKEN Brasil.\r\n\u25AA\tMarketing de produtos, novos eventos e pesquisa
+    de mercado: Os dados pessoais coletados poder\xE3o ser utilizados para envio
+    de publicidade e materiais promocionais, informa\xE7\xF5es sobre produtos e lan\xE7amento
+    de novos produtos, e/ou para convidar voc\xEA a participar de pesquisas de mercado.
+    Ainda, os dados pessoais poder\xE3o ser utilizados para melhor compreender os
+    seus gostos e interesses e, assim, enviar informa\xE7\xF5es mais relevantes para
+    voc\xEA. Pode ser necess\xE1rio seu consentimento para algumas dessas atividades
+    e, assim, este ser\xE1 oportunamente solicitado. Sem preju\xEDzo, ser\xE3o oferecidas
+    diversas maneiras para voc\xEA cancelar o recebimento de comunicados dessa natureza
+    por e-mail a qualquer momento, selecionando a op\xE7\xE3o de descadastramento
+    ao final de comunica\xE7\xF5es eletr\xF4nicas, e/ou informando o respons\xE1vel
+    por eventual contato telef\xF4nico, por exemplo.\r\n\u25AA\tGerenciamento e auditoria:
+    Os dados pessoais coletados poder\xE3o ser utilizados para gera\xE7\xE3o de relat\xF3rios
+    gerenciais; an\xE1lise e solu\xE7\xE3o de problemas administrativos, t\xE9cnicos
+    e/ou operacionais; viabilizar a melhoria de produtos/servi\xE7os; conduzir planejamento
+    de neg\xF3cios; processar transa\xE7\xF5es de pagamento; proteger e prevenir
+    fraudes e outros riscos legais ou de seguran\xE7a da informa\xE7\xE3o.\r\n\u25AA\tCumprimento
+    de obriga\xE7\xE3o legal e defesa de direitos: Os dados pessoais poder\xE3o ser
+    utilizados para fins de cumprimento de obriga\xE7\xE3o legal ou regulat\xF3ria
+    a que a empresa esteja sujeita, bem como para defesa de direitos em conflitos
+    judiciais ou extrajudiciais, e para prote\xE7\xE3o de direitos da HEINEKEN Brasil
+    e de terceiros.\r\nA HEINEKEN Brasil usar\xE1 os seus dados pessoais somente
+    para fins comunicados a voc\xEA, a menos que a empresa julgue precisar deles
+    para outros prop\xF3sitos compat\xEDveis com os originais, e que haja uma base
+    legal para o processamento posterior. Ou seja, os dados pessoais poder\xE3o ser
+    utilizados para finalidades secund\xE1rias n\xE3o conflitantes e/ou excessivas
+    em rela\xE7\xE3o as finalidades aqui listadas.\r\nA HEINEKEN Brasil trata seus
+    Dados Pessoais para os fins definidos nesta Pol\xEDtica porque um ou mais dos
+    seguintes se aplicam:\r\n\u25AA\tO tratamento \xE9 necess\xE1rio para a celebra\xE7\xE3o
+    e/ou execu\xE7\xE3o de um contrato com voc\xEA;\r\n\u25AA\tO tratamento decorre
+    de obriga\xE7\xE3o legal ou regulat\xF3ria a que a HEINEKEN Brasil est\xE1 sujeita;\r\n\u25AA\tO
+    tratamento \xE9 necess\xE1rio para que a HEINEKEN Brasil possa exercer ou defender
+    direitos;\r\n\u25AA\tA HEINEKEN Brasil tem interesse leg\xEDtimo em coletar e
+    processar os dados pessoais, para, por exemplo:\r\n\u25AA\tConduzir pesquisas
+    de mercado\r\n\u25AA\tAvaliar e desenvolver poss\xEDveis melhorias na Plataforma
+    e produtos/servi\xE7os\r\n\u25AA\tPersonalizar comunica\xE7\xF5es e conte\xFAdo
+    disponibilizados a voc\xEA\r\n\u25AA\tConduzir e gerenciar atividades da empresa\r\n\u25AA\tVoc\xEA
+    forneceu consentimento pr\xE9vio para certos tipos de tratamento.\r\n \r\nCOMPARTILHAMENTO
+    DE SEUS DADOS PESSOAIS\r\nA HEINEKEN Brasil s\xF3 compartilhar\xE1 seus dados
+    pessoais com aqueles que tenham necessidade leg\xEDtima. Sempre que a empresa
+    permite que um terceiro, que trate dados em nome dela (operador terceiro) ou
+    que determine as finalidades e meios do tratamento (controlador terceiro), acesse
+    dados pessoais, certifica-se de que tais informa\xE7\xF5es s\xE3o usadas de maneira
+    consistente com esta Pol\xEDtica (e quaisquer outras diretrizes de tratamento
+    de dados pessoais aplic\xE1veis).\r\nAssim, seus dados pessoais podem ser compartilhados
+    com nossa matriz, empresas subsidi\xE1rias, afiliadas e terceiros, como provedores
+    de servi\xE7os e parceiros, para finalidades leg\xEDtimas da seguinte maneira:\r\n\u25AA\tPara
+    condu\xE7\xE3o das atividades de tratamento de dados pessoais acima descritas,
+    inclusive o armazenamento dos dados pessoais coletados;\r\n\u25AA\tPara permitir
+    que terceiros forne\xE7am servi\xE7os para a HEINEKEN Brasil, como a plataforma
+    que gerencia a emiss\xE3o de ingressos para visita \xE0s f\xE1bricas;\r\n\u25AA\tPara
+    obedecer obriga\xE7\xF5es legais, regulat\xF3rias ou contratuais, ou responder
+    a um processo judicial ou administrativo, auditoria ou solicita\xE7\xF5es legais
+    por autoridades p\xFAblicas e policiais, quando for entedido que a HEINEKEN Brasil
+    est\xE1 legalmente obrigada a faz\xEA-lo. As categorias de destinat\xE1rios incluem
+    contrapartes em contratos, \xF3rg\xE3os judiciais e governamentais;\r\n\u25AA\tPara
+    exerc\xEDcio leg\xEDtimo de direito em processo judicial, administrativo ou arbitral,
+    inclusive prevenindo les\xE3o ou amea\xE7a a direito;\r\n\u25AA\tOnde for necess\xE1rio
+    para proteger voc\xEA e a empresa e seus interesse leg\xEDtimos;\r\n\u25AA\tComo
+    parte de due diligence corporativa e/ou due diligence relativa \xE0 fus\xE3o,
+    aquisi\xE7\xE3o, altera\xE7\xE3o da empresa, \xE9 poss\xEDvel divulgar os seus
+    dados pessoais ao potencial comprador, novo prestador de servi\xE7os e respectivos
+    assessores, na medida do quanto necess\xE1rio e adequado para o atingimento da
+    aludida finalidade;\r\n\u25AA\tNo caso de opera\xE7\xF5es societ\xE1rias, como
+    reestrutura\xE7\xE3o, fus\xE3o ou venda de ativos, os seus dados pessoais poder\xE3o
+    ser transferidos, desde que respeitados os termos desta Pol\xEDtica. O mesmo
+    poder\xE1 ocorrer nos casos de recupera\xE7\xE3o judicial ou fal\xEAncia; e/ou\r\n\u25AA\tCom
+    o seu consentimento legalmente obtido, isto \xE9 dado de forma volunt\xE1ria
+    e sem que voc\xEA sofra qualquer consequ\xEAncia adversa de seu decis\xE3o que
+    negar ou revogar o seu consentimento.\r\nVoc\xEA reconhece que informa\xE7\xF5es
+    agregadas e anonimizadas poder\xE3o ser livremente compartilhadas.\r\n \r\nTRANSFER\xCANCIA
+    INTERNACIONAL DE DADOS PESSOAIS\r\nA HEINEKEN Brasil integra o Grupo HEINEKEN
+    que opera a n\xEDvel global. Portanto, dados pessoais talvez precisem ser transferidos
+    para pa\xEDses fora do Brasil. Por exemplo, as informa\xE7\xF5es coletadas podem
+    ser rotineiramente transferidas para Holanda, local da sede global do Grupo,
+    e/ou outro pa\xEDs para fins, por exemplo, de administra\xE7\xE3o de auditoria
+    de processos conduzidos e armazenamento de dados pessoais.\r\nA HEINEKEN Brasil
+    pode, igualmente, subcontratar o tratamento ou compartilhar os seus dados pessoais
+    com terceiros localizados em outros pa\xEDses para fins de atingimento dos prop\xF3sitos
+    descritos nesta Pol\xEDtica de Privacidade.\r\nQuando seus dados pessoais s\xE3o
+    transferidos para um pa\xEDs diferente do Brasil, \xE9 garantida que essa transfer\xEAncia
+    obede\xE7a \xE0s normas aplic\xE1veis, em particular a LGPD, e seja conduzida
+    de modo a preservar seus dados pessoais. Assim, a transfer\xEAncia internacional
+    de seus dados somente ser\xE1 realizada, ausente decis\xE3o de adequa\xE7\xE3o
+    da Autoridade Nacional de Prote\xE7\xE3o de Dados (\u201CANPD\u201D) e as salvaguardas
+    dispostas no inciso II do artigo 33 da LGPD, na hip\xF3tese de ser ela necess\xE1ria
+    e conforme mais adequado diante de uma das seguintes hip\xF3teses: (a) a prote\xE7\xE3o
+    da vida ou da incolumidade f\xEDsica sua ou de terceiro; (b) a autoridade nacional
+    autorizar a transfer\xEAncia; (c) mediante a sua autoriza\xE7\xE3o; (d) para
+    cumprimento de obriga\xE7\xE3o legal ou regulat\xF3ria a que a empresa est\xE1
+    submetida; (e) para executar devidamente o contrato estabelecido com voc\xEA;
+    ou (f) para exerc\xEDcio regular de direitos.\r\n \r\nSEGURAN\xC7A DOS DADOS
+    PESSOAIS\r\nA HEINEKEN Brasil est\xE1 empenhada em proteger a seguran\xE7a de
+    seus dados pessoais. \xC9 utilizada uma vasta gama de tecnologias e procedimentos
+    de seguran\xE7a para ajudar a proteger seus dados pessoais contra acesso, utiliza\xE7\xE3o
+    ou divulga\xE7\xE3o n\xE3o autorizados. Por exemplo, os dados pessoais que voc\xEA
+    fornece s\xE3o armazenados em servidores com acesso limitado que est\xE3o localizados
+    em instala\xE7\xF5es controladas e, quando determinadas informa\xE7\xF5es pessoais
+    com maior grau de sensibilidade s\xE3o transmitidas, ocorre prote\xE7\xE3o por
+    meio do uso de criptografia.\r\nOs dados pessoais tratados s\xE3o armazenados
+    para as finalidades apresentadas nesta Pol\xEDtica, na forma da lei, em, por
+    exemplo, servi\xE7os de nuvem contratados que podem estar ou n\xE3o localizados
+    no Brasil ou arquivos f\xEDsicos, que atendem, ainda, aos padr\xF5es de seguran\xE7a
+    da informa\xE7\xE3o adequados tais como:\r\n\u25AA\tEstabelecimento de controle
+    estrito sobre o acesso aos dados mediante a defini\xE7\xE3o de responsabilidades
+    das pessoas que ter\xE3o possibilidade de acesso e de privil\xE9gios de acesso
+    exclusivo;\r\n\u25AA\tProte\xE7\xE3o contra acesso n\xE3o autorizado com utiliza\xE7\xE3o
+    de mecanismo de autentica\xE7\xE3o dupla de acesso aos dados, senha e chaves;
+    e\r\n\u25AA\tCria\xE7\xE3o e manuten\xE7\xE3o de invent\xE1rio detalhado dos
+    acessos contendo o momento, a dura\xE7\xE3o, a identidade do respons\xE1vel pelo
+    acesso, e dados acessados.\r\nPara al\xE9m de medidas administrativas, t\xE9cnicas
+    e f\xEDsicas para proteger os dados pessoais contra perda, roubo, uso indevido,
+    bem como contra acesso n\xE3o autorizado, divulga\xE7\xE3o, altera\xE7\xE3o e
+    destrui\xE7\xE3o, s\xE3o adotadas pol\xEDticas e procedimentos espec\xEDficos
+    para colaboradores e/ou terceiros que t\xEAm contato com os dados pessoais aqui
+    elencados.\r\nQuaisquer divulga\xE7\xF5es legalmente exigidas sobre viola\xE7\xF5es
+    de seguran\xE7a, confidencialidade ou integridade dos dados descritos nesta Pol\xEDtica,
+    notadamente de dados pessoais, ser\xE3o noticiadas adequadamente a voc\xEA via
+    e-mail ou disponibilizada de forma ostensiva nos canais de comunica\xE7\xE3o
+    da HEINEKEN Brasil, na medida em que consistente com (a) as necessidades leg\xEDtimas
+    do cumprimento da lei ou (b) quaisquer medidas necess\xE1rias para determinar
+    o escopo da viola\xE7\xE3o e restaurar a integridade razo\xE1vel do sistema de
+    dados.\r\nVoc\xEA compreende que a HEINEKEN Brasil n\xE3o pode garantir integralmente
+    que todas as informa\xE7\xF5es que trafegam na Plataforma e/ou em seus sistemas
+    n\xE3o sejam alvo de acessos n\xE3o autorizados advindos de conduta criminosa.
+    Voc\xEA tamb\xE9m deve adotar medidas para se proteger e manter, por exemplo,
+    seus dados pessoais seguros. Voc\xEA \xE9 respons\xE1vel pelos dados por voc\xEA
+    transmitidos na Plataforma.\r\n \r\nT\xC9RMINO DO TRATAMENTO\r\nA HEINEKEN Brasil
+    armazena seus dados pessoais apenas pelo tempo necess\xE1rio para que sejam atingidas
+    as finalidades aqui apresentadas, observados os seguintes crit\xE9rios:\r\n\u25AA\tReter
+    seus dados pessoais enquanto tiver um relacionamento com voc\xEA;\r\n\u25AA\tReter
+    os seus dados pessoais enquanto for necess\xE1rio para cumprir uma obriga\xE7\xE3o
+    legal ou regulat\xF3ria a que a empresa est\xE1 sujeita; e\r\n\u25AA\tReter seus
+    dados pessoais onde for aconselh\xE1vel salvaguardar ou melhorar a posi\xE7\xE3o
+    legal da HEINEKEN Brasil e/ou de terceiros (por exemplo, em rela\xE7\xE3o a lit\xEDgios,
+    investiga\xE7\xF5es regulat\xF3rias).\r\nA HEINEKEN Brasil pode manter os seus
+    dados pessoais, de forma anonimizadas, ou seja, que n\xE3o se referem mais a
+    voc\xEA pessoalmente, para fins estat\xEDsticos, sem limite de tempo, na medida
+    em que tenha interesse leg\xEDtimo e possibilidade legal em faz\xEA-lo.\r\n \r\nSEUS
+    DIREITOS E COMO EXERC\xCA-LOS\r\nVoc\xEA, como titular de dados pessoais, possui
+    direitos em rela\xE7\xE3o aos seus dados e ao modo como eles s\xE3o tratados.\r\nS\xE3o
+    seus direitos, de acordo com a LGPD e conforme a base legal espec\xEDfica adotada
+    pela empresa para tratar os seus dados pessoais:\r\nPossibilidade de confirma\xE7\xE3o
+    da exist\xEAncia de tratamento de dados pessoais e acesso a eles em formato simples\r\nCaso
+    voc\xEA queira ter a certeza se a HEINEKEN Brasil est\xE1 ou n\xE3o tratando
+    seus dados pessoais, voc\xEA tem o direito de questionar e pedir, por exemplo,
+    acesso \xE0 lista dos dados pessoais que a empresa possui a seu respeito.\r\nDeclara\xE7\xE3o
+    clara e completa com origem dos dados, tratamento, crit\xE9rios utilizados e
+    finalidades do tratamento\r\nCaso as informa\xE7\xF5es fornecidas ao exercer
+    o direito acima n\xE3o sejam suficientes, voc\xEA poder\xE1 pedir maiores informa\xE7\xF5es
+    sobre o tratamento de dados pessoais realizado pela HEINEKEN Brasil.\r\nCorre\xE7\xE3o
+    de dados pessoais incompletos, inexatos ou desatualizados\r\nCaso voc\xEA identifique
+    que os dados que a HEINEKEN Brasil possui a seu respeito est\xE3o incompletos,
+    inexatos ou desatualizados, voc\xEA poder\xE1 pedir para alter\xE1-los. Isso
+    \xE9 importante para que seus dados sejam processados da maneira correta para
+    atingir a finalidade das diversas atividades de tratamento aqui indicadas.\r\nAnonimiza\xE7\xE3o,
+    bloqueio ou elimina\xE7\xE3o de dados pessoais\r\nCaso voc\xEA deseje que a HEINEKEN
+    Brasil deixe de realizar o tratamento dos seus dados pessoais por entender haver
+    tratamento excessivo ou em desconformidade com a lei, poder\xE1 entrar em contato
+    com a empresa atrav\xE9s do e-mail lgpd@heineken.com.br, ocasi\xE3o em que ser\xE3o
+    avaliadas, ainda, a justificativa para o seu pedido e a possibilidade t\xE9cnica
+    de atend\xEA-lo. \xC9 poss\xEDvel, ainda, que voc\xEA requeira a elimina\xE7\xE3o
+    dos dados pessoais tratados com o seu consentimento e desde que ausente outra
+    finalidade legitimadora de sua conserva\xE7\xE3o, como a exist\xEAncia de obriga\xE7\xE3o
+    legal ou regulat\xF3ria a ser atendida pela HEINEKEN Brasil.\r\nPortabilidade
+    dos dados pessoais a outro fornecedor de servi\xE7o ou produto\r\nCaso deseje,
+    voc\xEA poder\xE1 pedir que a HEINEKEN Brasil exporte seus dados pessoais para
+    que outra entidade possa trat\xE1-los. Isso n\xE3o significa, necessariamente,
+    que seus dados ser\xE3o exclu\xEDdos da base da empresa.\r\nRevoga\xE7\xE3o do
+    consentimento\r\nPara as atividades de tratamento que se justificam pelo seu
+    consentimento, voc\xEA poder\xE1 retirar seu consentimento a qualquer momento.
+    Observe, no entanto, que isso n\xE3o afetar\xE1 a legalidade do processamento
+    antes da revoga\xE7\xE3o de seu consentimento.\r\nVoc\xEA possui, ainda, os direitos
+    de (a) exclus\xE3o de dados pessoais quando n\xE3o forem mais necess\xE1rios
+    para os fins para os quais foram coletados, exceto no caso de conserva\xE7\xE3o
+    necess\xE1ria autorizada pela legisla\xE7\xE3o aplic\xE1vel; (b) receber informa\xE7\xF5es
+    sobre as entidades p\xFAblicas e privadas com as quais a HEINEKEN Brasil compartilhou
+    seus dados pessoais; (c) receber informa\xE7\xF5es sobre a possibilidade de n\xE3o
+    dar consentimento e consequ\xEAncias da recusa; (d) opor-se ao tratamento de
+    dados pessoais ante ao n\xE3o cumprimento da legisla\xE7\xE3o aplic\xE1vel; e
+    (e) fazer reclama\xE7\xE3o perante a ANPD.\r\nVoc\xEA tem, igualmente, o direito
+    de solicitar a revis\xE3o de uma decis\xE3o baseada no processamento automatizado
+    de dados.\r\nPara exercer quaisquer dos direitos acima listados, voc\xEA dever\xE1
+    entrar em contato atrav\xE9s do e-mail lgpd@heineken.com.br. A HEINEKEN Brasil
+    poder\xE1 solicitar informa\xE7\xF5es espec\xEDficas suas para confirmar sua
+    identidade e direito de acesso, al\xE9m de procurar e fornecer os dados pessoais
+    que mant\xE9m sobre voc\xEA.\r\nA HEINEKEN Brasil tentar\xE1 atender seu pedido
+    no menor tempo poss\xEDvel, mas voc\xEA deve ter em mente que \xE9 necess\xE1rio
+    algum tempo para processar e responder todos os pedidos da melhor maneira.\r\n\r\nALTERA\xC7\xD5ES
+    NESTA POL\xCDTICA E POL\xCDTICAS DE TERCEIROS\r\nOcasionalmente, esta Pol\xEDtica
+    pode ser atualizada. Quando isso ocorrer, a data da \u201C\xFAltima atualiza\xE7\xE3o\u201D
+    ser\xE1 revisada. Se existirem altera\xE7\xF5es materiais significativas neste
+    aviso ou ao modo como seus dados pessoais s\xE3o tratados, como, por exemplo,
+    finalidade, forma e dura\xE7\xE3o, identifica\xE7\xE3o do controlador e/ou hip\xF3teses
+    de compartilhamento, ser\xE3o utilizados os esfor\xE7os razo\xE1veis para que
+    voc\xEA seja notificado, com destaque, acerca das mudan\xE7as. Recomenda-se que
+    voc\xEA consulte periodicamente esta Pol\xEDtica para se manter informado sobre
+    o modo como seus dados pessoais s\xE3o protegidos pela HEINEKEN Brasil.\r\nA
+    HEINEKEN Brasil n\xE3o \xE9 respons\xE1vel pelas pr\xE1ticas de privacidade e/ou
+    conte\xFAdos de terceiros. \xC9 preciso ter cautela e analisar as declara\xE7\xF5es
+    de privacidade de servi\xE7os de terceiros, entrando diretamente em contato com
+    o terceiro respons\xE1vel em caso de d\xFAvidas.\r\n \r\nFALE CONOSCO\r\nCaso
+    voc\xEA tenha qualquer d\xFAvida a respeito desta Pol\xEDtica, entre outros,
+    sobre os dados coletados, tratados e compartilhados, ou, ainda, sobre seus direitos,
+    voc\xEA poder\xE1 entrar em contato com a HEINEKEN Brasil atrav\xE9s do e-mail
+    lgpd@heineken.com.br. Voc\xEA poder\xE1, ainda, entrar em contato direto com
+    o Encarregado pelo tratamento de dados, Luis Felipe Rossi, utilizando-se do canal
+    lgpd@heineken.com.br.\r\n \r\nANEXOS\r\nANEXO I \u2013 Defini\xE7\xF5es relevantes\r\n\u25AA\tControlador:
+    \xE9 a pessoa natural ou jur\xEDdica, de direito p\xFAblico ou privado, a quem
+    competem as decis\xF5es referentes ao tratamento de dados pessoais (art. 5, VI,
+    LGPD).\r\n\u25AA\tDado pessoal: \xE9 a informa\xE7\xE3o que identifica ou pode
+    tornar voc\xEA identific\xE1vel (art. 5, I, LGPD).\r\n\u25AA\tDado pessoal sens\xEDvel:
+    \xE9 o dado pessoal sobre origem racial ou \xE9tnica, convic\xE7\xE3o religiosa,
+    opini\xE3o pol\xEDtica, filia\xE7\xE3o a sindicato ou a organiza\xE7\xE3o de
+    car\xE1ter religioso, filos\xF3fico ou pol\xEDtico, dado referente \xE0 sa\xFAde
+    ou \xE0 vida sexual, dado gen\xE9tico ou biom\xE9trico, quando vinculado a uma
+    pessoal natural (art. 5, II, LGPD).\r\n\u25AA\tOperador: \xE9 a pessoa natural
+    ou jur\xEDdica, de direito p\xFAblico ou privado, que realiza o tratamento de
+    dados pessoais em nome do controlador (art. 5, VII, LGPD).\r\n\u25AA\tTratamento:
+    \xE9 toda a opera\xE7\xE3o realizada com dados pessoais como coleta, produ\xE7\xE3o,
+    recep\xE7\xE3o, classifica\xE7\xE3o, utiliza\xE7\xE3o, acesso, reprodu\xE7\xE3o,
+    transmiss\xE3o, distribui\xE7\xE3o, processamento, arquivamento, armazenamento,
+    elimina\xE7\xE3o, avalia\xE7\xE3o ou controle da informa\xE7\xE3o, modifica\xE7\xE3o,
+    comunica\xE7\xE3o, transfer\xEAncia, difus\xE3o ou extra\xE7\xE3o (art. 5, X,
+    LGPD).\r\n\u25AA\tTitular: \xE9 a pessoa natural a quem se referem os dados pessoais
+    que s\xE3o objeto de tratamento (art. 5, V, LGPD).\r\n \r\nANEXO II \u2013 Empresas
+    do Grupo HEINEKEN no Brasil\r\n\u25AA\tHNK BR IND\xDASTRIA DE BEBIDAS LTDA,com
+    sede na Av. Primo Schincariol, n\xBA. 2.222/2.300, bairro do Itaim, Itu/SP, inscrita
+    no CNPJ/MF sob o n\xBA. 50.221.019/0001-36, e suas filiais;\r\n\u25AA\tHNK BR
+    BEBIDAS LTDA,com sede na Estrada do Guerengue, n\xBA 701, LOT 1 PAL 41284, GALPAO
+    01, Bairro Taquara, Rio de Janeiro /RJ, inscrita no CNPJ/MF sob o n\xBA 02.864.417/0001-28,
+    e suas filiais;\r\n\u25AA\tHNK BR LOG\xCDSTICA E DISTRIBUI\xC7\xC3O LTDA.,com
+    sede na Avenida Primo Schincariol, n\xBA 2.222/2.300, Galp\xE3o 01 - Bairro Itaim,
+    Itu/SP, inscrita no CNPJ/MF sob n\xBA. 05.254.957/0001-88, e suas filiais;\r\n\u25AA\tCERVEJARIA
+    BADEN BADEN LTDA,com sede na Av. Matheus da Costa Pinto, 1653, Vila Santa Cruz,
+    Campos do Jord\xE3o/SP, inscrita no CNPJ/MF sob o n\xBA 03.431.255/0001-05, e
+    suas filiais;\r\n\u25AA\tIND\xDASTRIA DE BEBIDAS IGARASSU LTDA, com sede na Rodovia
+    BR-101, Norte, Km, 37,3, Igarassu/PE, inscrita no CNPJ/MF sob o n\xBA 07.050.184/0001-43,
+    e suas filiais;\r\n\u25AA\tCERVEJARIA SUDBRACK LTDA.,com sede na Rua Bahia, 5.181,
+    sala 02, Salto Weissbach, Blumenau/SC, inscrita no CNPJ/MF 04.914.890/0001-06;\r\n\u25AA\tBAVARIA
+    S.A.,com sede na Rua Olimp\xEDadas, n\xBA. 205, 7\xBA andar, Vila Ol\xEDmpia,
+    S\xE3o Paulo/SP, inscrita no CNPJ/MF sob o n\xBA. 04.176.513/0001-09 e suas filiais;\r\n\u25AA\tCERVEJARIAS
+    KAISER BRASIL S.A.,com sede na Avenida Presidente Humberto de Alencar Castelo
+    Branco, n\xBA. 2.911, Parte, Rio Abaixo, Jacare\xED/SP, inscrita no CNPJ/MF sob
+    o n\xBA. 19.900.000/0001-76, e suas filiais;\r\n\u25AA\tCERVEJARIAS KAISER NORDESTE
+    S.A.,com sede na Rua dos Oper\xE1rios, S/N, Quadras H/I, Centro Industrial Subae,
+    Feira de Santana/BA, inscrita no CNPJ/MF sob o n\xBA. 21.900.899/0001-79 e suas
+    filais.\r\n"
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 18
+  m_fontSizeBase: 18
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1725455811
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725455808}
+  m_CullTransparentMesh: 1
 --- !u!1 &1726761065
 GameObject:
   m_ObjectHideFlags: 0
@@ -8865,6 +10256,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1733963795}
   m_CullTransparentMesh: 1
+--- !u!1 &1763564378
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1763564379}
+  - component: {fileID: 1763564381}
+  - component: {fileID: 1763564380}
+  m_Layer: 5
+  m_Name: Handle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1763564379
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763564378}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 776402865}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 20, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1763564380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763564378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1763564381
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763564378}
+  m_CullTransparentMesh: 1
 --- !u!1 &1769021903
 GameObject:
   m_ObjectHideFlags: 0
@@ -8920,6 +10387,43 @@ MonoBehaviour:
   - Marvvila
   answer: Ludmilla
   cantorMusica: Advinhe o artista!
+--- !u!1 &1770887745
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1770887746}
+  m_Layer: 5
+  m_Name: Fill Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1770887746
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770887745}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1104365041}
+  m_Father: {fileID: 1999620672}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.25}
+  m_AnchorMax: {x: 1, y: 0.75}
+  m_AnchoredPosition: {x: 2.5, y: 0}
+  m_SizeDelta: {x: -5, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1779199992
 GameObject:
   m_ObjectHideFlags: 0
@@ -9000,6 +10504,123 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1779199992}
   m_CullTransparentMesh: 1
+--- !u!1 &1782882249
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1782882250}
+  - component: {fileID: 1782882252}
+  - component: {fileID: 1782882251}
+  m_Layer: 5
+  m_Name: Text (Legacy) (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1782882250
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782882249}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1349678666}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 229.2909, y: 109.0159}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1782882251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782882249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0.52156866, b: 0.22745098, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 8c6834828e9d636499dd388288f52d9b, type: 3}
+    m_FontSize: 45
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 252
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 5
+--- !u!222 &1782882252
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782882249}
+  m_CullTransparentMesh: 1
+--- !u!1 &1784026686
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1784026687}
+  m_Layer: 5
+  m_Name: TestCrypto (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1784026687
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1784026686}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1922079443}
+  m_Father: {fileID: 994981131}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1790403823
 GameObject:
   m_ObjectHideFlags: 0
@@ -9251,6 +10872,159 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1847652736}
+  m_CullTransparentMesh: 1
+--- !u!1 &1850064183
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1850064184}
+  - component: {fileID: 1850064186}
+  - component: {fileID: 1850064185}
+  m_Layer: 5
+  m_Name: q3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1850064184
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850064183}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 767969017}
+  m_Father: {fileID: 485836722}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 89.316345, y: 437}
+  m_SizeDelta: {x: 69.8803, y: 69.8803}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1850064185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850064183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 60bcd4de1b097d8458f4e54d2c2cae80, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1850064186
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850064183}
+  m_CullTransparentMesh: 1
+--- !u!1 &1858947873
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1858947874}
+  - component: {fileID: 1858947876}
+  - component: {fileID: 1858947875}
+  m_Layer: 5
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1858947874
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858947873}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1999620672}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.25}
+  m_AnchorMax: {x: 1, y: 0.75}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1858947875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858947873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 155ae6d13f09e004d9afe997eca5f9b7, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1858947876
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858947873}
   m_CullTransparentMesh: 1
 --- !u!1 &1859708051
 GameObject:
@@ -9517,6 +11291,98 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1922079442
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1922079443}
+  - component: {fileID: 1922079446}
+  - component: {fileID: 1922079445}
+  - component: {fileID: 1922079447}
+  m_Layer: 5
+  m_Name: RegisterPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1922079443
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922079442}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1374288015}
+  m_Father: {fileID: 1784026687}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1820, y: 980}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1922079445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922079442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1922079446
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922079442}
+  m_CullTransparentMesh: 1
+--- !u!114 &1922079447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922079442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c88972e99588cb4f8491b9fc4d6b7e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progressBar: {fileID: 1374288016}
+  totalTime: 15
 --- !u!1 &1925472895
 GameObject:
   m_ObjectHideFlags: 0
@@ -9554,8 +11420,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1208, y: -134.68823}
-  m_SizeDelta: {x: 543.747, y: 191.1499}
+  m_AnchoredPosition: {x: 1205.0098, y: -158.01}
+  m_SizeDelta: {x: 555.328, y: 181.43}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1925472897
 MonoBehaviour:
@@ -10017,6 +11883,177 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1956804040}
   m_CullTransparentMesh: 1
+--- !u!1 &1984401760
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1984401761}
+  - component: {fileID: 1984401763}
+  - component: {fileID: 1984401762}
+  m_Layer: 5
+  m_Name: Text (Legacy) (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1984401761
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984401760}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 70989456}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 229.2909, y: 109.0159}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1984401762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984401760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0.52156866, b: 0.22745098, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 8c6834828e9d636499dd388288f52d9b, type: 3}
+    m_FontSize: 45
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 252
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 2
+--- !u!222 &1984401763
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984401760}
+  m_CullTransparentMesh: 1
+--- !u!1 &1999620671
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1999620672}
+  - component: {fileID: 1999620673}
+  m_Layer: 5
+  m_Name: Slider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1999620672
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999620671}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1858947874}
+  - {fileID: 1770887746}
+  - {fileID: 776402865}
+  m_Father: {fileID: 349912025}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000061035, y: -422}
+  m_SizeDelta: {x: 1006.7032, y: 37.9672}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1999620673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999620671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1763564380}
+  m_FillRect: {fileID: 1104365041}
+  m_HandleRect: {fileID: 1763564379}
+  m_Direction: 0
+  m_MinValue: 0
+  m_MaxValue: 1
+  m_WholeNumbers: 0
+  m_Value: 1
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2005018265
 GameObject:
   m_ObjectHideFlags: 0
@@ -10945,6 +12982,82 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2125272083}
+  m_CullTransparentMesh: 1
+--- !u!1 &2132040879
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2132040880}
+  - component: {fileID: 2132040882}
+  - component: {fileID: 2132040881}
+  m_Layer: 5
+  m_Name: Fill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2132040880
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2132040879}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 831033095}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -2.5, y: 0}
+  m_SizeDelta: {x: 5, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2132040881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2132040879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 1, b: 0.09055519, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 155ae6d13f09e004d9afe997eca5f9b7, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2132040882
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2132040879}
   m_CullTransparentMesh: 1
 --- !u!1 &2132932563
 GameObject:
