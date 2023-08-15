@@ -2,7 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Net;
+using System.Text.RegularExpressions;
 using System.Xml;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -27,12 +29,19 @@ public class RegisterWindow : MonoBehaviour
     [SerializeField] private PrivacyPolicyWindow privacyPolicyWindow;
     [SerializeField] private GuessWhoWindow guessWhoWindow;
     [SerializeField] private AlertPopup alertPopup;
+    [SerializeField] private CpfPopupValidation cpfPopupValidation;
+    [SerializeField] private AdultPopupValidation adultPopupValidation;
+    [SerializeField] private EmailPopupValidation emailPopupValidation;
 
     private string xmlString;
     private string folderOutput = Application.streamingAssetsPath;
     private string dataToEncrypt;
     private string fileName;
     private string stringEncrypted;
+    public string barName;
+    private bool isCpfValid;
+    private bool isAdult;
+    private bool IsEmail;
 
 
     private void Start()
@@ -54,23 +63,50 @@ public class RegisterWindow : MonoBehaviour
     private void GoTerms()
     {
         termsWindow.Show();
-        Hide();
+       
     }
 
     private void GoPolicy()
     {
         privacyPolicyWindow.Show();
-        Hide();
+        
     }
 
     private void GoGuessWhoWindow()
     {
 
+        isCpfValid = ValidateCPF(cpf.text);
+        isAdult = IsAdult(dataAniversario.text);
+        IsEmail = IsValidEmail(email.text);
+
         if (nome.text != "" && sobrenome.text != "" && cpf.text != "" && email.text != "" && dataAniversario.text != "" && terms.isChecked && policy.isChecked)
         {
-            guessWhoWindow.Show();
-            StartCoroutine(EncryptData());
-            Hide();
+ 
+            if (isCpfValid)
+            {
+                if (isAdult)
+                {
+                   if (IsEmail)
+                    {
+                        guessWhoWindow.Show();
+                        EncryptData();
+                        Hide();
+                    }
+                    else
+                    {
+                        emailPopupValidation.Show();
+                    }
+                }
+                else
+                {
+                    adultPopupValidation.Show();
+                }
+            }
+            else
+            {
+                cpfPopupValidation.Show();
+            }
+
         }
         else
         {
@@ -79,7 +115,7 @@ public class RegisterWindow : MonoBehaviour
     }
 
 
-    IEnumerator EncryptData()
+    void EncryptData()
     {
   
         XmlDocument xmlDoc = new XmlDocument();
@@ -103,7 +139,7 @@ public class RegisterWindow : MonoBehaviour
 
 
         stringEncrypted = RSAUtil.Encrypt(xmlString, dataToEncrypt);
-        fileName = "player_data/" + "moesbar" + "_" + formattedDateTime + ".enc";
+        fileName = string.Format("player_data/{0}_{1}.enc", barName, formattedDateTime);
 
         string fullPath = Path.Combine(folderOutput, fileName);
         Debug.Log(fullPath);
@@ -113,30 +149,8 @@ public class RegisterWindow : MonoBehaviour
             writer.Write(stringEncrypted);
         }
 
-        // Crie um objeto WWWForm para armazenar o arquivo
-        WWWForm form = new WWWForm();
-
-        // Carregue o arquivo binário
-        byte[] fileData = System.IO.File.ReadAllBytes(fullPath);
-        form.AddBinaryData("file", fileData, fileName);
-        form.AddField("nomeBar", "moes");
-
-        // Crie uma requisição UnityWebRequest para enviar o arquivo
-        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost:8080/api/players/upload", form))
-        {
-            yield return www.SendWebRequest(); // Envie a requisição
-
-            if (www.result == UnityWebRequest.Result.Success)
-            {
-                Debug.Log("Arquivo enviado com sucesso!");
-            }
-            else
-            {
-                Debug.Log("Erro ao enviar o arquivo: " + www.error);
-            }
-        }
-
     }
+
 
     private string FormatDateTimeString(string input)
     {
@@ -151,6 +165,84 @@ public class RegisterWindow : MonoBehaviour
             Debug.LogError("Failed to parse input date and time.");
             return string.Empty;
         }
+    }
+
+    public bool ValidateCPF(string cpf)
+    {
+        // Remova caracteres não numéricos do CPF
+        cpf = new string(cpf.Where(char.IsDigit).ToArray());
+
+        // Verifique se o CPF tem 11 dígitos
+        if (cpf.Length != 11)
+        {
+            return false;
+        }
+
+        // Verifique se todos os dígitos são iguais (CPF inválido)
+        if (new string(cpf[0], 11) == cpf)
+        {
+            return false;
+        }
+
+        // Calcule os dígitos verificadores
+        int[] multiplicadores1 = { 10, 9, 8, 7, 6, 5, 4, 3, 2 };
+        int[] multiplicadores2 = { 11, 10, 9, 8, 7, 6, 5, 4, 3, 2 };
+
+        string tempCpf = cpf.Substring(0, 9);
+        int soma = 0;
+
+        for (int i = 0; i < 9; i++)
+        {
+            soma += int.Parse(tempCpf[i].ToString()) * multiplicadores1[i];
+        }
+
+        int resto = soma % 11;
+        int digito1 = resto < 2 ? 0 : 11 - resto;
+
+        tempCpf += digito1;
+
+        soma = 0;
+        for (int i = 0; i < 10; i++)
+        {
+            soma += int.Parse(tempCpf[i].ToString()) * multiplicadores2[i];
+        }
+
+        resto = soma % 11;
+        int digito2 = resto < 2 ? 0 : 11 - resto;
+
+        tempCpf += digito2;
+
+        return cpf == tempCpf;
+    }
+
+    public static bool IsAdult(string birthdate)
+    {
+        DateTime birthdateDateTime;
+        if (!DateTime.TryParseExact(birthdate, "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out birthdateDateTime))
+        {
+            Debug.Log("Formato de data inválido!");
+            return false;
+        }
+
+        DateTime currentDate = DateTime.Now;
+        int age = currentDate.Year - birthdateDateTime.Year;
+
+        if (birthdateDateTime > currentDate.AddYears(-age))
+        {
+            age--;
+        }
+
+        return age >= 18;
+    }
+
+    public static bool IsValidEmail(string email)
+    {
+        
+        string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+
+        bool isMatch = Regex.IsMatch(email, pattern);
+
+        return isMatch;
     }
 
 
