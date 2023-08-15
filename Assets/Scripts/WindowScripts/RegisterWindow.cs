@@ -43,6 +43,7 @@ public class RegisterWindow : MonoBehaviour
     private bool isAdult;
     private bool IsEmail;
 
+    public string barName;
 
     private void Start()
     {
@@ -169,22 +170,22 @@ public class RegisterWindow : MonoBehaviour
 
     public bool ValidateCPF(string cpf)
     {
-        // Remova caracteres não numéricos do CPF
+        // Remova caracteres nï¿½o numï¿½ricos do CPF
         cpf = new string(cpf.Where(char.IsDigit).ToArray());
 
-        // Verifique se o CPF tem 11 dígitos
+        // Verifique se o CPF tem 11 dï¿½gitos
         if (cpf.Length != 11)
         {
             return false;
         }
 
-        // Verifique se todos os dígitos são iguais (CPF inválido)
+        // Verifique se todos os dï¿½gitos sï¿½o iguais (CPF invï¿½lido)
         if (new string(cpf[0], 11) == cpf)
         {
             return false;
         }
 
-        // Calcule os dígitos verificadores
+        // Calcule os dï¿½gitos verificadores
         int[] multiplicadores1 = { 10, 9, 8, 7, 6, 5, 4, 3, 2 };
         int[] multiplicadores2 = { 11, 10, 9, 8, 7, 6, 5, 4, 3, 2 };
 
@@ -220,7 +221,7 @@ public class RegisterWindow : MonoBehaviour
         DateTime birthdateDateTime;
         if (!DateTime.TryParseExact(birthdate, "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out birthdateDateTime))
         {
-            Debug.Log("Formato de data inválido!");
+            Debug.Log("Formato de data invï¿½lido!");
             return false;
         }
 
@@ -250,6 +251,7 @@ public class RegisterWindow : MonoBehaviour
     {
         gameObject.SetActive(true);
     }
+
     public void Hide()
     {
         gameObject.SetActive(false);
