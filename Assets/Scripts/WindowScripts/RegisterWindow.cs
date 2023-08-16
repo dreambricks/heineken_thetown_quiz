@@ -34,7 +34,7 @@ public class RegisterWindow : MonoBehaviour
     [SerializeField] private EmailPopupValidation emailPopupValidation;
 
     private string xmlString;
-    private string folderOutput = Path.Combine(Application.streamingAssetsPath, "user_data");
+    private string folderOutput;
     private string dataToEncrypt;
     private string fileName;
     private string stringEncrypted;
@@ -116,28 +116,43 @@ public class RegisterWindow : MonoBehaviour
 
     void EncryptData()
     {
-  
-        XmlDocument xmlDoc = new XmlDocument();
 
-        string xmlPath = Path.Combine(Application.streamingAssetsPath,"keys/public_key.xml");
+        XmlDocument xmlDoc = new XmlDocument();
+        string xmlFolder = Path.Combine(Application.persistentDataPath, "keys");
+
+        if (!Directory.Exists(xmlFolder))
+        {
+            Directory.CreateDirectory(xmlFolder);
+        }
+
+        string xmlPath = Path.Combine(xmlFolder, "public_key.xml");
+        Debug.Log(xmlPath);
 
         xmlDoc.Load(xmlPath);
 
         xmlString = xmlDoc.OuterXml;
 
         Debug.Log("XML as string:\n" + xmlString);
-    
 
         dataToEncrypt = nome.text + "," + sobrenome.text + "," + cpf.text + "," + dataAniversario.text + "," + email.text + "\n";
 
         DateTime today = DateTime.Now;
-        
+
         string formattedDate = today.ToString("yyyyMMdd HH:mm:ss");
 
         string formattedDateTime = FormatDateTimeString(formattedDate);
 
+        barName = BarConfig.LoadBarName();
 
         stringEncrypted = RSAUtil.Encrypt(xmlString, dataToEncrypt);
+
+        folderOutput = Path.Combine(Application.persistentDataPath, "user_data");
+
+        if (!Directory.Exists(folderOutput))
+        {
+            Directory.CreateDirectory(folderOutput);
+        }
+
         fileName = string.Format("{0}_{1}.enc", barName, formattedDateTime);
 
         string fullPath = Path.Combine(folderOutput, fileName);
@@ -147,6 +162,7 @@ public class RegisterWindow : MonoBehaviour
         {
             writer.Write(stringEncrypted);
         }
+
 
     }
 

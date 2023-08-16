@@ -7,8 +7,8 @@ using UnityEngine.Networking;
 
 public class DataUploader : MonoBehaviour
 {
-    private string outputFolder = Path.Combine(Application.streamingAssetsPath, "user_data");
-    private string backupFolder = Path.Combine(Application.streamingAssetsPath, "user_data_backup");
+    private string outputFolder;
+    private string backupFolder;
 
     public string uploadURL;
     private string barName;
@@ -17,6 +17,8 @@ public class DataUploader : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        outputFolder = Path.Combine(Application.persistentDataPath, "user_data");
+        backupFolder = Path.Combine(Application.persistentDataPath, "user_data_backup");
         CheckIfDirectoryExists(outputFolder);
         CheckIfDirectoryExists(backupFolder);
         StartCoroutine(Worker());
