@@ -7,8 +7,9 @@ using UnityEngine.Networking;
 
 public class DataUploader : MonoBehaviour
 {
-    public string outputFolder;
-    public string backupFolder;
+    private string outputFolder = Path.Combine(Application.streamingAssetsPath, "user_data");
+    private string backupFolder = Path.Combine(Application.streamingAssetsPath, "user_data_backup");
+
     public string uploadURL;
     public string barName;
     public int checkIntervalSeconds;
