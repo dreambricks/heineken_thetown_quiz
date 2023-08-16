@@ -11,7 +11,7 @@ public class DataUploader : MonoBehaviour
     private string backupFolder = Path.Combine(Application.streamingAssetsPath, "user_data_backup");
 
     public string uploadURL;
-    public string barName;
+    private string barName;
     public int checkIntervalSeconds;
 
     // Start is called before the first frame update
@@ -64,6 +64,9 @@ public class DataUploader : MonoBehaviour
 
     IEnumerator SendData(string filename)
     {
+
+        barName = BarConfig.LoadBarName();
+
         // Crie um objeto WWWForm para armazenar o arquivo
         WWWForm form = new WWWForm();
 
