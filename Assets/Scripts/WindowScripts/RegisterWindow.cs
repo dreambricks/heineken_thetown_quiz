@@ -34,7 +34,7 @@ public class RegisterWindow : MonoBehaviour
     [SerializeField] private EmailPopupValidation emailPopupValidation;
 
     private string xmlString;
-    private string folderOutput = Application.streamingAssetsPath;
+    private string folderOutput = Path.Combine(Application.streamingAssetsPath, "user_data");
     private string dataToEncrypt;
     private string fileName;
     private string stringEncrypted;
@@ -138,7 +138,7 @@ public class RegisterWindow : MonoBehaviour
 
 
         stringEncrypted = RSAUtil.Encrypt(xmlString, dataToEncrypt);
-        fileName = string.Format("player_data/{0}_{1}.enc", barName, formattedDateTime);
+        fileName = string.Format("{0}_{1}.enc", barName, formattedDateTime);
 
         string fullPath = Path.Combine(folderOutput, fileName);
         Debug.Log(fullPath);
