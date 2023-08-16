@@ -43,8 +43,6 @@ public class RegisterWindow : MonoBehaviour
     private bool isAdult;
     private bool IsEmail;
 
-    public string barName;
-
     private void Start()
     {
         termsBtn.onClick.AddListener(() => GoTerms());
