@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using Unity.VisualScripting.Antlr3.Runtime.Collections;
+using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -257,10 +256,12 @@ public class QuestionPanel : MonoBehaviour
         {
             if (points.hits >= 3)
             {
+                SendLog();
                 youWinWindow.Show();
             }
             else
             {
+                SendLog();
                 youLoseWindow.Show();
             }
             EnableButtons();
@@ -305,6 +306,39 @@ public class QuestionPanel : MonoBehaviour
             buttonColor.a = 0f;
             buttons[i].GetComponent<Image>().color = buttonColor;
         }
+    }
+
+    private void SendLog()
+    {
+        string folderPath = Path.Combine(Application.persistentDataPath, "data_logs");
+
+        if (!Directory.Exists(folderPath))
+        {
+            Directory.CreateDirectory(folderPath);
+        }
+
+        DataLog data = new DataLog();
+
+        data.barName = BarConfig.LoadBarName();
+        data.status = StatusEnum.CadastroConcluidoJogou.ToString();
+        data.hits = points.hits.ToString();
+        data.miss= points.miss.ToString();
+
+        string formattedDateTime = System.DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ssZ");
+
+        data.timePlayed = formattedDateTime;
+
+        string json = JsonUtility.ToJson(data);
+
+        string fileName = string.Format("{0}_{1}_datalog.json", data.barName, data.timePlayed.Replace("-", "").Replace("T", "_").Replace(":", "").Replace("Z", ""));
+        
+        string filePath = Path.Combine(folderPath, fileName);
+        Debug.Log(filePath);
+        using (StreamWriter writer = new StreamWriter(filePath))
+        {
+            writer.Write(json);
+        }
+
     }
 
 }

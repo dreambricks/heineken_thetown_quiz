@@ -25,7 +25,7 @@ public class DateMask : MonoBehaviour
     private string ApplyDateMask(string input)
     {
         string cleanedInput = Regex.Replace(input, @"[^\d]", "");
-        string formattedInput = Regex.Replace(cleanedInput, @"^(\d{2})(\d{0,2})(\d{0,4}).*", "$1/$2/$3");
+        string formattedInput = Regex.Replace(cleanedInput, @"^(\d{2})(\d{2})(\d{4}).*", "$1/$2/$3");
         return formattedInput;
     }
 

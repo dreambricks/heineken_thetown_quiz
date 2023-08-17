@@ -34,7 +34,6 @@ public class GameManager : MonoBehaviour
         youLoseWindow.Hide();
 
         mainWindow.OnClicked += MainWindow_OnClicked;
-        minorAgeWindow.OnClicked += MinorAgeWindow_OnClicked;
     }
 
     private void MainWindow_OnClicked(object sender, System.EventArgs e)
@@ -44,9 +43,4 @@ public class GameManager : MonoBehaviour
         ageConfirmWindow.Show();
     }
 
-    private void MinorAgeWindow_OnClicked(object sender, System.EventArgs e)
-    {
-        ageConfirmWindow.Show();
-        minorAgeWindow.Hide();
-    }
 }

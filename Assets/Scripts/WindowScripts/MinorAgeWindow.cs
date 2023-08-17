@@ -1,21 +1,82 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using CodeMonkey.Utils;
+using System.IO;
+using UnityEngine.UI;
 
 public class MinorAgeWindow : MonoBehaviour
 {
-    public event EventHandler OnClicked;
+    [SerializeField] private MainWindow mainWindow;
+    public Button button;
 
-    private void Awake()
+    public float totalTime = 40.0f;
+    private float currentTime;
+  
+
+    private void OnEnable()
     {
+        currentTime = totalTime;
+    }
 
-        transform.Find("MinorAgeBtn").GetComponent<Button_UI>().ClickFunc = () =>
+    private void Start()
+    {
+        button.onClick.AddListener(() => GoMainWindow());
+    }
+
+    private void Update()
+    {
+        Countdown();
+    }
+
+    private void Countdown()
+    {
+        currentTime -= Time.deltaTime;
+
+        if (currentTime <= 0)
         {
-            OnClicked(this, EventArgs.Empty);
+            currentTime = 0;
+            mainWindow.Show();
+            SendLog();
+            Hide();
+        }
+    }
 
-        };
+    private void GoMainWindow()
+    {
+        mainWindow.Show();
+        SendLog();
+        Hide();
+    }
+
+    private void SendLog()
+    {
+        string folderPath = Path.Combine(Application.persistentDataPath, "data_logs");
+
+        if (!Directory.Exists(folderPath))
+        {
+            Directory.CreateDirectory(folderPath);
+        }
+
+        DataLog data = new DataLog();
+
+        data.barName = BarConfig.LoadBarName();
+        data.status = StatusEnum.MenorDeIdade.ToString();
+
+        string formattedDateTime = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ssZ");
+
+        data.timePlayed = formattedDateTime;
+
+
+        string json = JsonUtility.ToJson(data);
+
+        string fileName = string.Format("{0}_{1}_datalog.json", data.barName, data.timePlayed.Replace("-","").Replace("T","_").Replace(":","").Replace("Z",""));
+        Debug.Log(fileName);
+
+        string filePath = Path.Combine(folderPath, fileName);
+
+        using (StreamWriter writer = new StreamWriter(filePath))
+        {
+            writer.Write(json);
+        }
 
     }
 
