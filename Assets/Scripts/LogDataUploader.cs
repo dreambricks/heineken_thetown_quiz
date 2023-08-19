@@ -1,11 +1,11 @@
 using System;
 using System.Collections;
 using System.IO;
-using System.Net;
+using Newtonsoft.Json;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class DataUploader : MonoBehaviour
+public class LogDataUploader : MonoBehaviour
 {
     public string outputFolder;
     public string backupFolder;
@@ -65,10 +65,14 @@ public class DataUploader : MonoBehaviour
 
         string fullPath = Path.Combine(outputPath, filename);
 
-        // Carregue o arquivo binario
-        byte[] fileData = System.IO.File.ReadAllBytes(fullPath);
-        form.AddBinaryData("file", fileData, filename);
-        form.AddField("nomeBar", barName);
+        string json = File.ReadAllText(fullPath);
+        var dataLog = JsonConvert.DeserializeObject<DataLog>(json);
+
+        form.AddField("barName", barName);
+        form.AddField("timePlayed", dataLog.timePlayed);
+        form.AddField("status", dataLog.status);
+        form.AddField("hits", dataLog.hits);
+        form.AddField("miss", dataLog.miss);
 
         // Crie uma requisicao UnityWebRequest para enviar o arquivo
         using (UnityWebRequest www = UnityWebRequest.Post(uploadURL, form))
