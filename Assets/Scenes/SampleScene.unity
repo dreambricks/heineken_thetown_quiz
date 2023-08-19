@@ -8004,7 +8004,7 @@ MonoBehaviour:
   adultPopupValidation: {fileID: 1814365460}
   emailPopupValidation: {fileID: 1081850952}
   mainWindow: {fileID: 754417670}
-  totalTime: 40
+  totalTime: 120
 --- !u!1 &1240406288
 GameObject:
   m_ObjectHideFlags: 0
