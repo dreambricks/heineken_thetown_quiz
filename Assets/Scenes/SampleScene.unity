@@ -11438,7 +11438,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outputFolder: data_logs
   backupFolder: data_logs_backup
-  uploadURL: http://18.228.206.21:8080/api/logs/upload
+  uploadURL: http://18.228.206.21:8080/api/datalogs/upload
   checkIntervalSeconds: 120
 --- !u!4 &1711430121
 Transform:
