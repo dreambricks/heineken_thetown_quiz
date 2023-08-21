@@ -9287,7 +9287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outputFolder: user_data
   backupFolder: user_data_backup
-  uploadURL: http://54.94.73.62:8080/api/players/upload
+  uploadURL: http://hnk150.ddns.net:8080/api/players/upload
   checkIntervalSeconds: 300
 --- !u!4 &1427838503
 Transform:
@@ -11458,7 +11458,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outputFolder: data_logs
   backupFolder: data_logs_backup
-  uploadURL: http://54.94.73.62:8080/api/datalogs/upload
+  uploadURL: http://hnk150.ddns.net:8080/api/datalogs/upload
   checkIntervalSeconds: 120
 --- !u!4 &1711430121
 Transform:
