@@ -58,7 +58,7 @@ public class LogDataUploader : MonoBehaviour
 
     virtual protected IEnumerator SendData(string filename)
     {
-        string barName = BarConfig.LoadBarName();
+        
 
         // Crie um objeto WWWForm para armazenar o arquivo
         WWWForm form = new WWWForm();
@@ -68,7 +68,7 @@ public class LogDataUploader : MonoBehaviour
         string json = File.ReadAllText(fullPath);
         var dataLog = JsonConvert.DeserializeObject<DataLog>(json);
 
-        form.AddField("barName", barName);
+        form.AddField("barName", dataLog.barName);
         form.AddField("timePlayed", dataLog.timePlayed);
         form.AddField("status", dataLog.status);
         form.AddField("hits", dataLog.hits);

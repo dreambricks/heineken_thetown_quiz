@@ -5373,11 +5373,31 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Brahma
+    - m_Text: Tablet_0
       m_Image: {fileID: 0}
-    - m_Text: Moes
+    - m_Text: Tablet_1
       m_Image: {fileID: 0}
-    - m_Text: Five
+    - m_Text: Tablet_2
+      m_Image: {fileID: 0}
+    - m_Text: Tablet_3
+      m_Image: {fileID: 0}
+    - m_Text: Tablet_4
+      m_Image: {fileID: 0}
+    - m_Text: Tablet_5
+      m_Image: {fileID: 0}
+    - m_Text: Tablet_6
+      m_Image: {fileID: 0}
+    - m_Text: Tablet_7
+      m_Image: {fileID: 0}
+    - m_Text: Tablet_8
+      m_Image: {fileID: 0}
+    - m_Text: Tablet_9
+      m_Image: {fileID: 0}
+    - m_Text: Tablet_10
+      m_Image: {fileID: 0}
+    - m_Text: Tablet_11
+      m_Image: {fileID: 0}
+    - m_Text: Tablet_12
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -9267,7 +9287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outputFolder: user_data
   backupFolder: user_data_backup
-  uploadURL: http://18.228.206.21:8080/api/players/upload
+  uploadURL: http://54.94.73.62:8080/api/players/upload
   checkIntervalSeconds: 300
 --- !u!4 &1427838503
 Transform:
@@ -11438,7 +11458,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outputFolder: data_logs
   backupFolder: data_logs_backup
-  uploadURL: http://18.228.206.21:8080/api/datalogs/upload
+  uploadURL: http://54.94.73.62:8080/api/datalogs/upload
   checkIntervalSeconds: 120
 --- !u!4 &1711430121
 Transform:
