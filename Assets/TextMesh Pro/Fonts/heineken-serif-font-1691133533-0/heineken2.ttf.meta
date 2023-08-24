@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 513a0049d8d5c3f449ccb3bba59b4bf8
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Heineken
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 8c6834828e9d636499dd388288f52d9b, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

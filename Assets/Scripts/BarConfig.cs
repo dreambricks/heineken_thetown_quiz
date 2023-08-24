@@ -13,6 +13,8 @@ public class BarConfig : MonoBehaviour
     private void Start()
     {
         saveButton.onClick.AddListener(SaveConfig);
+        string barNameOption = LoadBarName();
+        SetDropdownValueByName(barName, barNameOption);
     }
 
     private void SaveConfig()
@@ -60,7 +62,7 @@ public class BarConfig : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Option name not found in the Dropdown!");
+            dropdown.value = 0;
         }
     }
 
